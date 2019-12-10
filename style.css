@@ -1,0 +1,23 @@
+/** generelt **/
+
+.hidden {
+    visibility: hidden;
+}
+
+/** header **/
+
+
+/** media queries **/
+
+@media(min-width: 700px) {
+
+    /** header **/
+
+    #menu {
+        visibility: visible;
+    }
+
+    #menuknap {
+        display: none;
+    }
+}
