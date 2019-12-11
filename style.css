@@ -10,6 +10,26 @@ body {
     visibility: hidden;
 }
 
+a {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
+
+a:hover {
+    color: #fffdf3;
+}
+
+.button {
+    background-color: #c194bb;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 /** header **/
 
 #logo {
@@ -63,12 +83,55 @@ nav {
 /** forside **/
 
 #splash_video {
-    position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100vh;
 }
+
+#forside_smykker {
+    padding: 2vw;
+}
+
+#smykker_oversigt {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2vh;
+}
+
+.forside_smykke {
+    height: 220px;
+    width: 220px;
+    margin: 1vh auto;
+    cursor: pointer;
+}
+
+.forside_smykke:hover {
+    filter: grayscale(50);
+    transform: scale(1.01);
+}
+
+#forside_ringe {
+    background-image: url(img/forlovelse8.jpg);
+    background-size: 100%;
+}
+
+#forside_hals {
+    background-image: url(img/forlovelse8.jpg);
+    background-size: 100%;
+}
+
+#forside_ore {
+    background-image: url(img/forlovelse8.jpg);
+    background-size: 100%;
+}
+
+#forside_cuf {
+    background-image: url(img/forlovelse8.jpg);
+    background-size: 100%;
+}
+
+
 
 /** Custom orders **/
 
@@ -101,5 +164,12 @@ nav {
 
     #menuknap {
         display: none;
+    }
+
+    /** forside **/
+
+    .forside_smykke {
+        height: 280px;
+        width: 280px;
     }
 }
