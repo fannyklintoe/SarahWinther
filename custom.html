@@ -16,9 +16,14 @@
         .slideshow-container {
             max-width: 480px;
             position: relative;
-            margin: auto;
-            padding-top: 250px;
+            float: left;
+            justify-content: space-around;
+            margin: 100px;
+            padding-top: 180px;
+            background-color: aqua;
+
         }
+
 
         /* Hide the images by default */
         .mySlides {
@@ -58,6 +63,7 @@
             border-radius: 50%;
             display: inline-block;
             transition: background-color 0.6s ease;
+            float: inherit;
         }
 
         .active,
@@ -93,58 +99,103 @@
             }
         }
 
-        #customorder {
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-content: space-between;
-            padding: 100;
-            margin: 100;
-        }
+/*Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+width: 100%; /* Full width */
+padding: 12px; /* Some padding */
+border: 1px solid #ccc; /* Gray border */
+border-radius: 4px; /* Rounded borders */
+box-sizing: border-box; /* Make sure that padding and width stays in place */
+margin-top: 6px; /* Add a top margin */
+margin-bottom: 16px; /* Bottom margin */
+resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
 
-        .customorder {
-            max-width: 480px;
-            margin: 100px;
-            padding: 100px;
-        }
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+background-color: #4CAF50;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
 
-    </style>
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+        .contact_container{
+            margin: auto;
+            padding: 200px;
+            box-sizing: border-box;
+            background-color: beige;
+        }
+        .contact{
+            position: relative;
+            margin: auto;
+            padding: 200px;
+
+        }
+</style>
 
     <script>
         var slideIndex = 1;
-        showSlides(slideIndex);
+    showSlides(slideIndex);
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
         }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        if (n < 1) {
+            slideIndex = slides.length
         }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
 
-    </script>
+    const url = "http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-admin/post";
+    let customtext;
+
+    document.addEventListener("DOMContentLoaded", start);
+
+    function start() {
+        hentJson();
+    }
+
+    async function hentJson() {
+        const response = await fetch(url);
+        console.log(response);
+        side = await response.json();
+        console.log(customtext);
+        visData();
+    }
+
+    function visData() {
+        document.querySelector(".customtext").innerHTML = side.content.rendered;
+    }
+</script>
 </head>
 
 <body>
@@ -154,9 +205,6 @@
     <section id="slideshow">
         <div class="slideshow-container">
 
-
-
-            <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
                 <img src="img/forlovelse1.jpg" style="width:100%">
             </div>
@@ -184,7 +232,6 @@
             <div class="mySlides fade">
                 <img src="img/forlovelse5.jpg" style="width:100%">
             </div>
-
             <div class="mySlides fade">
                 <img src="img/vielse5.jpg" style="width:100%">
             </div>
@@ -203,42 +250,59 @@
             <div class="mySlides fade">
                 <img src="img/forlovelse8.jpg" style="width:100%">
             </div>
+
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+                <span class="dot" onclick="currentSlide(11)"></span>
+                <span class="dot" onclick="currentSlide(12)"></span>
+                <span class="dot" onclick="currentSlide(13)"></span>
+                <span class="dot" onclick="currentSlide(14)"></span>
+                <span class="dot" onclick="currentSlide(15)"></span>
+            </div>
         </div>
-        <br>
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
-            <span class="dot" onclick="currentSlide(10)"></span>
-            <span class="dot" onclick="currentSlide(11)"></span>
-            <span class="dot" onclick="currentSlide(12)"></span>
-            <span class="dot" onclick="currentSlide(13)"></span>
-            <span class="dot" onclick="currentSlide(14)"></span>
-            <span class="dot" onclick="currentSlide(15)"></span>
+
+        <article class="customtext"></article>
+
+    </section>
+
+    <section class="contact">
+        <div class="contact_container">
+            <form action="action_page.php">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" placeholder="E-mail...">
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
         </div>
     </section>
 
-    <section id="customorder">
-        <div id="customorder">
-            <img src="img/forlovelse4.jpg" alt="forlovelsesring">
-        </div>
-        <p>I design and create every engagement ring and set of wedding bands for the specific couple.
 
-            I work in gold (14 or 18 karat), white-gold (14 or 18 karat) and 925 sterling silver. All the stones I use are either fairtrade diamonds or natural gemstones mined under sustainable conditions for both the miners, stone-cutters and the environment.
 
-            The price varies depending on design (width, thickness, size etc.) and material choice.
 
-            Below you can see a selection of some of the bespoke and custom ordered rings I've done.</p>
-    </section>
 
 
 </body>
