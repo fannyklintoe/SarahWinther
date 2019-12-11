@@ -40,13 +40,12 @@ a:hover {
     display: none;
 }
 
-
 nav {
-    background-color: #c194bb;
+    background-color: #fffdf3;
     height: 8vh;
     width: 100vw;
-    position: fixed;
     z-index: 100;
+    position: fixed;
 
 }
 
@@ -54,7 +53,7 @@ nav {
     text-align: right;
     display: flex;
     flex-direction: column;
-    background-color: #c194bb;
+    background-color: #fffdf3;
     width: 100vw;
 }
 
@@ -104,30 +103,43 @@ nav {
     width: 220px;
     margin: 1vh auto;
     cursor: pointer;
+    position: relative;
 }
 
 .forside_smykke:hover {
-    filter: grayscale(50);
+    filter: grayscale(80);
     transform: scale(1.01);
 }
 
+.smykker_title {
+    background-color: none;
+    width: 200px;
+    padding: 1vh;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
 #forside_ringe {
-    background-image: url(img/forlovelse8.jpg);
+    background-image: url(img/oversigt_ringe.jpg);
     background-size: 100%;
 }
 
 #forside_hals {
-    background-image: url(img/forlovelse8.jpg);
+    background-image: url(img/oversigt_hals.jpg);
     background-size: 100%;
 }
 
 #forside_ore {
-    background-image: url(img/forlovelse8.jpg);
+    background-image: url(img/oversigt_ore.jpg);
     background-size: 100%;
 }
 
 #forside_cuf {
-    background-image: url(img/forlovelse8.jpg);
+    background-image: url(img/oversigt_cuf.jpg);
     background-size: 100%;
 }
 
