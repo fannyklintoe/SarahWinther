@@ -93,8 +93,21 @@
             }
         }
 
+        #customorder {
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: space-between;
+            padding: 100;
+            margin: 100;
+        }
 
-        .customorder {}
+        .customorder {
+            max-width: 480px;
+            margin: 100px;
+            padding: 100px;
+        }
+
     </style>
 
     <script>
@@ -130,6 +143,7 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
+
     </script>
 </head>
 
@@ -137,85 +151,96 @@
     <header></header>
 
     <script src="script.js"></script>
-
-    <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <img src="img/forlovelse1.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/Vielse1.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/forlovelse2.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/vielse2.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/forlovelse3.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/vielse3.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/forlovelse4.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/vielse4.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/forlovelse5.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides fade">
-            <img src="img/vielse5.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/forlovelse6.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/vielse6.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/forlovelse7.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/vielse7.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="img/forlovelse8.jpg" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
-    <!--<div id="customorder">
-        <img src="img/forlovelse4.jpg" alt="forlovelsesring">
-    </div>-->
+    <section id="slideshow">
+        <div class="slideshow-container">
 
 
-    <br>
 
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
-        <span class="dot" onclick="currentSlide(11)"></span>
-        <span class="dot" onclick="currentSlide(12)"></span>
-        <span class="dot" onclick="currentSlide(13)"></span>
-        <span class="dot" onclick="currentSlide(14)"></span>
-        <span class="dot" onclick="currentSlide(15)"></span>
-    </div>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="img/forlovelse1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/Vielse1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/forlovelse2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/vielse2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/forlovelse3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/vielse3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/forlovelse4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/vielse4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/forlovelse5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/vielse5.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/forlovelse6.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/vielse6.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/forlovelse7.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/vielse7.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/forlovelse8.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+            <span class="dot" onclick="currentSlide(15)"></span>
+        </div>
+    </section>
+
+    <section id="customorder">
+        <div id="customorder">
+            <img src="img/forlovelse4.jpg" alt="forlovelsesring">
+        </div>
+        <p>I design and create every engagement ring and set of wedding bands for the specific couple.
+
+            I work in gold (14 or 18 karat), white-gold (14 or 18 karat) and 925 sterling silver. All the stones I use are either fairtrade diamonds or natural gemstones mined under sustainable conditions for both the miners, stone-cutters and the environment.
+
+            The price varies depending on design (width, thickness, size etc.) and material choice.
+
+            Below you can see a selection of some of the bespoke and custom ordered rings I've done.</p>
+    </section>
+
+
 </body>
 
 </html>
