@@ -8,6 +8,137 @@
     <link rel="stylesheet" href="style.css">
 
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 480px;
+            position: relative;
+            margin: auto;
+            padding-top: 250px;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 70%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+    </style>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
 </head>
 
 <body>
@@ -15,96 +146,59 @@
 
     <script src="script.js"></script>
 
-    <!-- Slideshow container -->
     <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-            <div class="numbertext">1 / 15</div>
             <img src="img/forlovelse1.jpg" style="width:100%">
-            <div class="text">Caption Text</div>
         </div>
-
         <div class="mySlides fade">
-            <div class="numbertext">2 / 15</div>
             <img src="img/Vielse1.jpg" style="width:100%">
-            <div class="text">Caption Two</div>
         </div>
-
         <div class="mySlides fade">
-            <div class="numbertext">3 / 15</div>
             <img src="img/forlovelse2.jpg" style="width:100%">
-            <div class="text">Caption Three</div>
         </div>
-
         <div class="mySlides fade">
-            <div class="numbertext">4 / 15</div>
             <img src="img/vielse2.jpg" style="width:100%">
-            <div class="text">Caption Text</div>
         </div>
-
         <div class="mySlides fade">
-            <div class="numbertext">5 / 15</div>
             <img src="img/forlovelse3.jpg" style="width:100%">
-            <div class="text">Caption Two</div>
         </div>
-
         <div class="mySlides fade">
-            <div class="numbertext">6 / 15</div>
             <img src="img/vielse3.jpg" style="width:100%">
-            <div class="text">Caption Three</div>
         </div>
         <div class="mySlides fade">
-            <div class="numbertext">7 / 15</div>
             <img src="img/forlovelse4.jpg" style="width:100%">
-            <div class="text">Caption Text</div>
         </div>
-
         <div class="mySlides fade">
-            <div class="numbertext">8 / 15</div>
             <img src="img/vielse4.jpg" style="width:100%">
-            <div class="text">Caption Two</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="img/forlovelse5.jpg" style="width:100%">
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">9 / 15</div>
-            <img src="img/forlovelse5.jpg" style="width:100%">
-            <div class="text">Caption Three</div>
+            <img src="img/vielse5.jpg" style="width:100%">
         </div>
-        <!-- Next and previous buttons -->
+        <div class="mySlides fade">
+            <img src="img/forlovelse6.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/vielse6.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/forlovelse7.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/vielse7.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/forlovelse8.jpg" style="width:100%">
+        </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <div class="mySlides fade">
-        <div class="numbertext">10 / 15</div>
-        <img src="img/vielse5.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-    </div>
-    <div class="mySlides fade">
-        <div class="numbertext">11 / 15</div>
-        <img src="img/forlovelse6.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-    </div>
-    <div class="mySlides fade">
-        <div class="numbertext">12 / 15</div>
-        <img src="img/vielse6.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-    </div>
-    <div class="mySlides fade">
-        <div class="numbertext">13 / 15</div>
-        <img src="img/forlovelse7.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-    </div>
-    <div class="mySlides fade">
-        <div class="numbertext">14 / 15</div>
-        <img src="img/vielse7.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-    </div>
-    <div class="mySlides fade">
-        <div class="numbertext">15 / 15</div>
-        <img src="img/forlovelse8.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-    </div>
+
 
     <br>
 
