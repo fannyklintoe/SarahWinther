@@ -24,7 +24,7 @@ function toggleMenu() { //denne funktionen får burgermenuen til at virke
         document.querySelector("#menuknap").textContent = "☰";
         document.querySelector("#burgermenu").classList = "";
     } else { // hvis erSkjult ikke er sandt skal menuknappen være et x og burgermenuen skjules med klassen hidden
-        document.querySelector("#menuknap").textContent = "✘";
+        document.querySelector("#menuknap").textContent = "X";
         document.querySelector("#burgermenu").classList = "hidden";
     }
 }

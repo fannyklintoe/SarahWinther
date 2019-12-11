@@ -1,11 +1,45 @@
 /** generelt **/
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .hidden {
     visibility: hidden;
 }
 
 /** header **/
 
+
+nav {
+    background-color: #c194bb;
+    height: 8vh;
+    width: 100vw;
+    position: fixed;
+}
+
+#menu {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    background-color: #c194bb;
+    width: 100vw;
+}
+
+#menu a {
+    padding: 2vw 5vw;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+#menuknap {
+    text-align: right;
+    margin: 2vw 5vw;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 
 /** media queries **/
 
@@ -15,6 +49,12 @@
 
     #menu {
         visibility: visible;
+        flex-direction: row;
+    }
+
+    #menu a {
+        font-size: 1.1rem;
+        padding: 1vw;
     }
 
     #menuknap {
