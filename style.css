@@ -12,6 +12,14 @@ body {
 
 /** header **/
 
+#logo {
+    background-image: url(img/logo.svg);
+    background-size: 100%;
+    width: 200px;
+    height: 77.3px;
+    display: none;
+}
+
 
 nav {
     background-color: #c194bb;
@@ -53,11 +61,18 @@ nav {
     font-weight: bold;
 }
 
+/** Custom orders **/
+
 /** media queries **/
 
 @media(min-width: 700px) {
 
     /** header **/
+
+    #logo {
+        display: block;
+    }
+
 
     #menu {
         visibility: visible;
