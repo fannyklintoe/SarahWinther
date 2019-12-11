@@ -20,6 +20,7 @@
             justify-content: space-around;
             margin: 100px;
             padding-top: 180px;
+            background-color: aqua;
 
         }
 
@@ -97,10 +98,7 @@
                 opacity: 1
             }
         }
-        #contact{
 
-
-        }
 /*Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
 width: 100%; /* Full width */
@@ -128,70 +126,76 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
-.contact_container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 200px;
-}
-    </style>
+
+        .contact_container{
+            margin: auto;
+            padding: 200px;
+            box-sizing: border-box;
+            background-color: beige;
+        }
+        .contact{
+            position: relative;
+            margin: auto;
+            padding: 200px;
+
+        }
+</style>
 
     <script>
         var slideIndex = 1;
-        showSlides(slideIndex);
+    showSlides(slideIndex);
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
         }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        if (n < 1) {
+            slideIndex = slides.length
         }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
-
-        const url = "http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-admin/post";
-        let customtext;
-
-        document.addEventListener("DOMContentLoaded", start);
-
-        function start() {
-            hentJson();
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
         }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
 
-        async function hentJson() {
-            const response = await fetch(url);
-            console.log(response);
-            side = await response.json();
-            console.log(customtext);
-            visData();
-        }
+    const url = "http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-admin/post";
+    let customtext;
 
-        function visData() {
-            document.querySelector(".customtext").innerHTML = side.content.rendered;
-        }
+    document.addEventListener("DOMContentLoaded", start);
 
-    </script>
+    function start() {
+        hentJson();
+    }
+
+    async function hentJson() {
+        const response = await fetch(url);
+        console.log(response);
+        side = await response.json();
+        console.log(customtext);
+        visData();
+    }
+
+    function visData() {
+        document.querySelector(".customtext").innerHTML = side.content.rendered;
+    }
+</script>
 </head>
 
 <body>
@@ -273,7 +277,8 @@ input[type=submit]:hover {
         <article class="customtext"></article>
 
     </section>
-    <section id="contact">
+
+    <section class="contact">
         <div class="contact_container">
             <form action="action_page.php">
 
@@ -293,8 +298,9 @@ input[type=submit]:hover {
 
             </form>
         </div>
-
     </section>
+
+
 
 
 
