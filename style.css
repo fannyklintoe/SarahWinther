@@ -207,6 +207,12 @@ footer {
 
 /** Custom orders **/
 
+/** About **/
+
+#about_video {
+    height: 60vh;
+}
+
 /** media queries **/
 
 @media(min-width: 700px) {
