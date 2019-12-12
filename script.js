@@ -94,9 +94,12 @@ function visShopData() {
         if (smykke.categories == filter || filter == "alle") {
             const klon = skabelon.cloneNode(true);
 
-            klon.querySelector("#shop_img").src = smykke.billede_1;
+            klon.querySelector("#shop_img").src = smykke.billede_1.guid;
 
-            klon.querySelector("#shop_h2").textContent = smykke.beskrivelse;
+            klon.querySelector("#shop_h2").textContent = smykke.title.rendered;
+
+            liste.appendChild(klon);
+
         }
 
     })
