@@ -4,8 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Winther | Custom orders</title>
+    <title>Sarah Winther</title>
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
     <style>
@@ -99,6 +103,14 @@
             }
         }
 
+        .slideshow{
+            display: flex;
+            flex-direction: row;
+            background-color: orangered;
+            padding-top: 200px;
+
+        }
+
 /*Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
 width: 100%; /* Full width */
@@ -128,17 +140,26 @@ input[type=submit]:hover {
 
 
         .contact_container{
+            display: flex;
             margin: auto;
-            padding: 200px;
+            padding: 10px;
             box-sizing: border-box;
             background-color: beige;
         }
         .contact{
             position: relative;
             margin: auto;
-            padding: 200px;
+            padding: 30px;
+            justify-content: center;
 
         }
+        .article{
+            display: flex;
+            margin: auto;
+            box-sizing: border-box;
+            background-color: aqua;
+        }
+
 </style>
 
     <script>
@@ -201,7 +222,8 @@ input[type=submit]:hover {
     <header></header>
 
     <script src="script.js"></script>
-    <section id="slideshow">
+
+    <section class="slideshow">
         <div class="slideshow-container">
 
             <div class="mySlides fade">
@@ -271,11 +293,13 @@ input[type=submit]:hover {
                 <span class="dot" onclick="currentSlide(14)"></span>
                 <span class="dot" onclick="currentSlide(15)"></span>
             </div>
+
         </div>
-
-        <article class="customtext"></article>
-
+        <div class="article">
+            <article class="customtext"></article>
+        </div>
     </section>
+
 
     <section class="contact">
         <div class="contact_container">
