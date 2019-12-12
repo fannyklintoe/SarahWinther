@@ -14,6 +14,10 @@ function start() {
     if (document.querySelector("#shop")) {
         startShop();
     }
+
+    if (document.querySelector("#forside")) {
+        hentForsideJson();
+    }
 }
 
 async function hentHeader() {
@@ -38,6 +42,20 @@ function toggleMenu() { //denne funktionen får burgermenuen til at virke
         document.querySelector("#menuknap").textContent = "X";
         document.querySelector("#burgermenu").classList = "hidden";
     }
+}
+
+async function hentForsideJson() {
+    console.log("starter forsiden")
+
+    const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/82");
+    console.log(response);
+    side = await response.json();
+    console.log(side);
+    visForsideJson();
+}
+
+function visForsideJson() {
+    document.querySelector("#forside_txt").innerHTML = side.content.rendered;
 }
 
 function startShop() {
