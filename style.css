@@ -10,6 +10,10 @@ body {
     width: 100%;
 }
 
+img {
+    width: 100%;
+}
+
 .hidden {
     visibility: hidden;
 }
@@ -205,6 +209,53 @@ footer {
     grid-area: forside_txt;
 }
 
+/** Shop **/
+
+#shop {
+    /*Container-element for sidemenu*/
+    padding: 100px 0 0 0;
+}
+
+
+#liste {
+    /*Her indsættes json dataen*/
+    display: grid;
+    /*Dataen opstilles vha. grid*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /*Fortæller antal kollonner og bredde på kolonner*/
+    grid-gap: 1.5rem;
+    /*Mellemrum mellem kolonnerne*/
+    width: 60vw;
+    margin: 1vw auto;
+}
+
+#liste .smykke {
+    /*Indhold fra data*/
+    text-align: center;
+    /*Indholde placeres centralt*/
+    cursor: pointer;
+    border: none;
+}
+
+#sidebar {
+    /*Menu i siden*/
+    position: sticky;
+    /*Menuen sidder fast når man scroller*/
+    top: 55px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    /*Menuenpunkterne flexer ved siden af hinanden*/
+    width: 90vw;
+    margin: auto;
+}
+
+.valgt {
+    /*Klassen som bliver tilføjet knappen når den er blevet trykket på*/
+    background-color: #8DA187;
+    color: black;
+}
+
 /** Custom orders **/
 
 /** media queries **/
@@ -250,4 +301,41 @@ footer {
         grid-template-areas:
             "forside_portrait forside_txt";
     }
+
+    /** shop **/
+
+    #shop {
+        padding: 150px 0 0 0;
+        margin: 0 8vw;
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "sidebar liste liste liste"
+    }
+
+
+    #liste {
+        grid-area: liste;
+        width: 60vw;
+        margin: auto;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 12vw;
+        grid-area: sidebar;
+        width: 20vw;
+        margin: 0;
+        flex-direction: column;
+        left: 8vw;
+    }
+
+    #sidebar button:hover {
+        transform: scale(1.03);
+    }
+
+    #liste .smykke:hover {
+        transform: scale(1.02);
+    }
+
 }

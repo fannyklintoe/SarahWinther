@@ -72,7 +72,7 @@ function filtrer() {
 
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
-    filter = this.dataset.kategori;
+    filter = this.dataset.categories;
 
     visShopData();
 }
