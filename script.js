@@ -72,7 +72,7 @@ function filtrer() {
 
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
-    filter = this.dataset.categories;
+    filter = this.dataset.kategori;
 
     visShopData();
 }
@@ -90,8 +90,10 @@ function visShopData() {
 
     console.log("viser data")
 
+    liste.textContent = "";
+
     smykker.forEach(smykke => {
-        if (smykke.categories == filter || filter == "alle") {
+        if (smykke.kategori == filter || filter == "alle") {
             const klon = skabelon.cloneNode(true);
 
             klon.querySelector("#shop_img").src = smykke.billede_1.guid;
