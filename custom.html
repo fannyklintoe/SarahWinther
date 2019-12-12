@@ -99,6 +99,14 @@
             }
         }
 
+        .slideshow{
+            display: flex;
+            flex-direction: row;
+            background-color: orangered;
+            padding-top: 200px;
+
+        }
+
 /*Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
 width: 100%; /* Full width */
@@ -128,17 +136,26 @@ input[type=submit]:hover {
 
 
         .contact_container{
+            display: flex;
             margin: auto;
-            padding: 200px;
+            padding: 10px;
             box-sizing: border-box;
             background-color: beige;
         }
         .contact{
             position: relative;
             margin: auto;
-            padding: 200px;
+            padding: 30px;
+            justify-content: center;
 
         }
+        .article{
+            display: flex;
+            margin: auto;
+            box-sizing: border-box;
+            background-color: aqua;
+        }
+
 </style>
 
     <script>
@@ -202,7 +219,8 @@ input[type=submit]:hover {
     <header></header>
 
     <script src="script.js"></script>
-    <section id="slideshow">
+
+    <section class="slideshow">
         <div class="slideshow-container">
 
             <div class="mySlides fade">
@@ -272,12 +290,13 @@ input[type=submit]:hover {
                 <span class="dot" onclick="currentSlide(14)"></span>
                 <span class="dot" onclick="currentSlide(15)"></span>
             </div>
-        </div>
 
+        </div>
+        <div class="article">
+            <article class="customtext"></article>
+        </div>
     </section>
-    <section id="customtext">
-        <article class="customtext"></article>
-    </section>
+
 
     <section class="contact">
         <div class="contact_container">
