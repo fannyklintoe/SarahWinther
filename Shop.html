@@ -13,6 +13,28 @@
 <body>
     <header></header>
 
+    <main id="shop">
+
+        <div id="sidebar">
+            <button class="button filter valgt" data-kategori="alle">All</button>
+            <button class="button filter" data-kategori="2">Rings</button>
+            <button class="button filter" data-kategori="6">Necklaces</button>
+            <button class="button filter" data-kategori="3">Earrings</button>
+            <button class="button filter" data-kategori="4">Ear Cuffs</button>
+        </div>
+
+        <template>
+            <!-- template der fungerer som skabelon for opbygningen af dataindholdet der senere hentes fra google sheet -->
+            <article id="smykker_loop" class="smykke">
+                <img id="shop_img">
+                <h2 id="shop_h2"></h2>
+            </article>
+        </template>
+
+        <section id="liste"></section>
+
+    </main>
+
     <script src="script.js"></script>
 </body>
 

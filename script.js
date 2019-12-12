@@ -1,8 +1,23 @@
 window.addEventListener("DOMContentLoaded", start);
 
+let smykker = [];
+let filter = "alle";
+let filterKnapper = document.querySelectorAll("#sidebar button");
+const skabelon = document.querySelector("template").content;
+const liste = document.querySelector("#liste");
+
 function start() {
     console.log("start");
+
     hentHeader();
+
+    if (document.querySelector("#shop")) {
+        startShop();
+    }
+
+    if (document.querySelector("#forside")) {
+        hentForsideJson();
+    }
 }
 
 async function hentHeader() {
@@ -27,4 +42,62 @@ function toggleMenu() { //denne funktionen får burgermenuen til at virke
         document.querySelector("#menuknap").textContent = "X";
         document.querySelector("#burgermenu").classList = "hidden";
     }
+}
+
+async function hentForsideJson() {
+    console.log("starter forsiden")
+
+    const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/82");
+    console.log(response);
+    side = await response.json();
+    console.log(side);
+    visForsideJson();
+}
+
+function visForsideJson() {
+    document.querySelector("#forside_txt").innerHTML = side.content.rendered;
+}
+
+function startShop() {
+    console.log("start shop");
+
+    hentShopData();
+
+    filterKnapper.forEach(knap =>
+        knap.addEventListener("click", filtrer));
+}
+
+function filtrer() {
+    console.log("filtrer");
+
+    document.querySelector(".valgt").classList.remove("valgt");
+    this.classList.add("valgt");
+    filter = this.dataset.kategori;
+
+    visShopData();
+}
+
+async function hentShopData() {
+
+    let shopData = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/smykke");
+
+    smykker = await shopData.json();
+
+    visShopData();
+}
+
+function visShopData() {
+
+    console.log("viser data")
+
+    smykker.forEach(smykke => {
+        if (smykke.categories == filter || filter == "alle") {
+            const klon = skabelon.cloneNode(true);
+
+            klon.querySelector("#shop_img").src = smykke.billede_1;
+
+            klon.querySelector("#shop_h2").textContent = smykke.beskrivelse;
+        }
+
+    })
 }
