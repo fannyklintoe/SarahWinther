@@ -1,14 +1,10 @@
 window.addEventListener("DOMContentLoaded", start);
-
+const urlParams = new URLSearchParams(window.location.search);
 let smykker = [];
 let filter = "alle";
 let filterKnapper = document.querySelectorAll("#sidebar button");
 const skabelon = document.querySelector("template").content;
 const liste = document.querySelector("#liste");
-
-//produkt
-
-
 
 function start() {
     console.log("start");
@@ -66,9 +62,24 @@ function visForsideJson() {
     document.querySelector("#forside_txt").innerHTML = side.content.rendered;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 function startShop() {
     console.log("start shop");
+    document.querySelector("button[data-kategori='alle']").classList.add("valgt");
+    console.log("ert ert w3r ", urlParams, filter, document.querySelector(`button[data-kategori="${filter}"]`));
 
+
+    if (urlParams.get("kategori")) {
+        filter = urlParams.get("kategori");
+        //document.querySelector("button[data-kategori='"+filter+"']").classList.add("valgt");
+
+        document.querySelector(".valgt").classList.remove("valgt");
+        document.querySelector(`button[data-kategori="${filter}"]`).classList.add("valgt");
+
+    }
+    //let filter = kategori;
+
+    //filtrer();
     hentShopData();
 
     filterKnapper.forEach(knap =>
@@ -76,11 +87,17 @@ function startShop() {
 }
 
 function filtrer() {
-    console.log("filtrer");
+    console.log("filtrer", this);
 
     document.querySelector(".valgt").classList.remove("valgt");
+
+
     this.classList.add("valgt");
     filter = this.dataset.kategori;
+
+
+
+    console.log(filter, this.dataset.kategori, this.classList);
 
     visShopData();
 }
