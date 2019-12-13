@@ -17,12 +17,18 @@
             box-sizing: border-box;
         }
 
+        .slideshow{
+            display: flex;
+             flex-direction: row;
+            align-content: center;
+            justify-content: space-between;
+        }
         .slideshow-container {
             max-width: 480px;
             position: relative;
             float: left;
             justify-content: space-around;
-            margin: 100px;
+            margin: auto;
             padding-top: 180px;
             background-color: aqua;
 
@@ -111,7 +117,7 @@
 
         }
 
-/*Style inputs with type="text", select elements and textareas */
+
 input[type=text], select, textarea {
 width: 100%; /* Full width */
 padding: 12px; /* Some padding */
@@ -196,6 +202,8 @@ input[type=submit]:hover {
         dots[slideIndex - 1].className += " active";
     }
 
+<<<<<<< HEAD
+=======
     const url = "http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/74";
 
     document.addEventListener("DOMContentLoaded", start);
@@ -211,10 +219,8 @@ input[type=submit]:hover {
         console.log(customtext);
         visData();
     }
+>>>>>>> origin/master
 
-    function visData() {
-        document.querySelector(".customtext").innerHTML = side.content.rendered;
-    }
 </script>
 </head>
 
@@ -295,8 +301,14 @@ input[type=submit]:hover {
             </div>
 
         </div>
-        <div class="article">
-            <article class="customtext"></article>
+        <div class="tekst">
+
+            <p>I design and create every engagement ring and set of wedding bands for the specific couple.<br>
+
+                I work in gold (14 or 18 karat), white-gold (14 or 18 karat) and 925 sterling silver. All the stones I use are either fairtrade diamonds or natural gemstones mined under sustainable conditions for both the miners, stone-cutters and the environment.<br>
+
+                The price varies depending on design (width, thickness, size etc.) and material choice.</p>
+
         </div>
     </section>
 
