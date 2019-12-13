@@ -26,9 +26,7 @@ a {
     color: black;
 }
 
-a:hover {
-    color: #fffdf3;
-}
+a:hover {}
 
 .button {
     background-color: #e0cadd;
@@ -40,7 +38,6 @@ a:hover {
 
 .button:hover {
     background-color: #c294bb;
-    color: #fffdf3;
 }
 
 h3 {
@@ -48,6 +45,13 @@ h3 {
     font-weight: bold;
     font-size: 3rem;
     margin: 0;
+}
+
+h4 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 1vw 0;
 }
 
 p {
@@ -94,9 +98,7 @@ nav {
     font-weight: bold;
 }
 
-#menu a:hover {
-    color: #fffdf3;
-}
+#menu a:hover {}
 
 #menuknap {
     text-align: right;
@@ -133,19 +135,19 @@ footer {
     display: flex;
     flex-wrap: wrap;
     padding: 2vh;
-    margin: 5vh 0 0 0;
+    margin: 5vh auto;
+    justify-content: space-between;
 }
 
 .forside_smykke {
     height: 220px;
     width: 220px;
-    margin: 1vh auto;
     cursor: pointer;
     position: relative;
 }
 
 .forside_smykke:hover {
-    filter: grayscale(80);
+    filter: grayscale(50);
     transform: scale(1.01);
 }
 
