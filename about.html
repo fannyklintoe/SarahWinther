@@ -31,31 +31,6 @@
         </section>
     </main>
 
-    <script>
-        window.addEventListener("DOMContentLoaded", start);
+    <script src="script.js"></script>
 
-        function start() {
-            console.log("start");
-
-            if (document.querySelector("#about")) {
-                hentForsideJson();
-            }
-        }
-        async function hentForsideJson() {
-            console.log("starter about")
-
-            const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/66");
-            console.log(response);
-            side = await response.json();
-            console.log(side);
-            visAboutJson();
-        }
-
-        function visAboutJson() {
-            document.querySelector("#about_txt").innerHTML = side.content.rendered;
-        }
-
-    </script>
-</body>
-
-</html>
+</body></html>

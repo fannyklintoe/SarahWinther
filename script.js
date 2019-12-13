@@ -22,6 +22,9 @@ function start() {
     if (document.querySelector("#product")) {
         hentProduktData();
     }
+    if (document.querySelector("#about")) {
+        hentForsideJson();
+    }
 }
 
 async function hentHeader() {
@@ -154,4 +157,17 @@ function visProduktData() {
             document.querySelector("p").textContent = smykke.beskrivelse;
         }
     })
+}
+async function hentForsideJson() {
+    console.log("starter about")
+
+    const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/66");
+    console.log(response);
+    side = await response.json();
+    console.log(side);
+    visAboutJson();
+}
+
+function visAboutJson() {
+    document.querySelector("#about_txt").innerHTML = side.content.rendered;
 }
