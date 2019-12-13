@@ -149,9 +149,22 @@ function visProduktData() {
 
     smykker.forEach(smykke => {
         if (smykke.slug == slug) {
-            document.querySelector("img").src = smykke.billede_1.guid;
 
-            document.querySelector("p").textContent = smykke.beskrivelse;
+            document.querySelector("#produkt_titel").textContent = smykke.title.rendered;
+
+            document.querySelector("#billede_1").src = smykke.billede_1.guid;
+
+            document.querySelector("#billede_2").src = smykke.billede_2.guid;
+
+            document.querySelector("#produkt_beskrivelse").textContent = smykke.beskrivelse;
+
+            document.querySelector("#produkt_fragt").textContent = smykke.fragt;
+
+            document.querySelector("#produkt_pris").textContent = "Pris: " + smykke.pris + " DKK";
         }
+    })
+
+    document.querySelector(".luk").addEventListener("click", () => {
+        history.back();
     })
 }

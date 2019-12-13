@@ -34,10 +34,16 @@ a:hover {}
     padding: 10px;
     text-align: center;
     margin: 0 auto;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.2rem;
 }
 
 .button:hover {
     background-color: #c294bb;
+}
+
+button {
+    font-family: 'Poiret One', cursive;
 }
 
 h3 {
@@ -51,7 +57,7 @@ h4 {
     font-family: 'Poiret One', cursive;
     font-weight: bold;
     font-size: 1.2rem;
-    margin: 1vw 0;
+    margin: 0;
 }
 
 p {
@@ -73,10 +79,11 @@ p {
 nav {
     /*background-color: #fefdf9;*/
     background-color: #ede2ee;
-    height: 8vh;
+    height: 55px;
     width: 100vw;
     z-index: 100;
     position: fixed;
+    top: 0;
 
 }
 
@@ -144,6 +151,7 @@ footer {
     width: 220px;
     cursor: pointer;
     position: relative;
+    margin: 1vh auto;
 }
 
 .forside_smykke:hover {
@@ -228,7 +236,7 @@ footer {
     grid-gap: 1rem;
     /*Mellemrum mellem kolonnerne*/
     width: 60vw;
-    margin: 1vw auto;
+    margin: 30px auto;
 }
 
 #liste .smykke {
@@ -237,25 +245,50 @@ footer {
     /*Indholde placeres centralt*/
     cursor: pointer;
     border: none;
+    margin: 0 0 20px 0;
 }
 
 #sidebar {
     /*Menu i siden*/
-    position: sticky;
+    position: fixed;
     /*Menuen sidder fast når man scroller*/
     top: 55px;
     left: 0px;
     display: flex;
     flex-direction: row;
     /*Menuenpunkterne flexer ved siden af hinanden*/
-    width: 90vw;
-    margin: auto;
+    width: 100vw;
 }
 
 .valgt {
     /*Klassen som bliver tilføjet knappen når den er blevet trykket på*/
     background-color: #8DA187;
     color: black;
+}
+
+/** Product **/
+
+.luk {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#smykkearticle {
+    width: 90vw;
+    margin: 150px auto 0;
+}
+
+#produkt_pris {
+    font-weight: bold;
+}
+
+#smykkearticle .button {
+    width: 90vw;
 }
 
 /** Custom orders **/
@@ -282,7 +315,7 @@ footer {
     }
 
     nav {
-        height: 13vh;
+        height: 130px;
     }
 
 
@@ -318,11 +351,10 @@ footer {
 
     #shop {
         padding: 150px 0 0 0;
-        margin: 0 8vw;
         display: grid;
         grid-gap: 0rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "sidebar liste liste liste"
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "sidebar liste liste liste liste"
     }
 
 
@@ -350,6 +382,69 @@ footer {
         transform: scale(1.02);
     }
 
+    /** Product ***/
+
+    .luk {
+        top: 130px;
+    }
+
+    #smykkearticle {
+        margin: 170px 5vw;
+        display: grid;
+        grid-gap: 0 1rem;
+        grid-template-areas:
+            "titel titel"
+            "billede_1 beskrivelse"
+            "billede_1 fragt"
+            "billede_1 info"
+            "billede_1 pris"
+            "billede_1 knap";
+    }
+
+    #produkt_titel {
+        grid-area: titel;
+    }
+
+    #billede_1 {
+        grid-area: billede_1;
+        width: 40vw;
+        margin: 10px;
+    }
+
+    #billede_2 {
+        grid-area: billede_2;
+    }
+
+    #produkt_beskrivelse {
+        grid-area: beskrivelse;
+        width: 40vw;
+    }
+
+    #produkt_fragt {
+        grid-area: fragt;
+        width: 40vw;
+    }
+
+    #produkt_pris {
+        grid-area: pris;
+    }
+
+    #produkt_info {
+        grid-area: info;
+    }
+
+    #addtocart {
+        grid-area: knap;
+    }
+
+    #kob {
+        grid-area: kob;
+    }
+
+    #smykkearticle .button {
+        width: 40vw;
+        height: 20px;
+    }
 }
 
 /*
