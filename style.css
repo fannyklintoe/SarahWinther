@@ -259,6 +259,10 @@ footer {
 /** Custom orders **/
 
 /** About **/
+#video {
+    display: flex;
+    flex-direction: column;
+}
 
 #about_video {
     height: 60vh;
