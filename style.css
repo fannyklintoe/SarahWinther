@@ -262,11 +262,39 @@ footer {
 #video {
     display: flex;
     flex-direction: column;
+    padding-top: 15vw;
 }
 
 #about_video {
     height: 60vh;
 }
+
+#about_wrapper {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1.6rem;
+    grid-template-areas:
+        "forside_txt"
+        "forside_portrait"
+    ;
+}
+
+#about_portrait {
+    background-image: url(img/portrait.jpg);
+    background-size: 100%;
+    height: 508.5px;
+    width: 450px;
+    flex-basis: 1;
+    flex-grow: 200px;
+    grid-area: forside_portrait;
+}
+
+#about_txt {
+    grid-area: forside_txt;
+    margin-top: 5vw;
+}
+
 
 /** media queries **/
 

@@ -23,10 +23,39 @@
                 <source src="video/video.mp4" type="video/mp4"></video>
         </section>
         <section id="about_text">
-
+            <div id="about_wrapper">
+                <div id="about_portrait"></div>
+                <div id="about_txt"></div>
+            </div>
 
         </section>
     </main>
 
-    <script src="script.js"></script>
-</body></html>
+    <script>
+        window.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("start");
+
+            if (document.querySelector("#about")) {
+                hentForsideJson();
+            }
+        }
+        async function hentForsideJson() {
+            console.log("starter about")
+
+            const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/66");
+            console.log(response);
+            side = await response.json();
+            console.log(side);
+            visAboutJson();
+        }
+
+        function visAboutJson() {
+            document.querySelector("#about_txt").innerHTML = side.content.rendered;
+        }
+
+    </script>
+</body>
+
+</html>
