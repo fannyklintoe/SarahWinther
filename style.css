@@ -3,7 +3,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fefdf9;
+    /*background-color: #fefdf9;*/
+    background-image: url(img/background.png);
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    width: 100%;
 }
 
 .hidden {
@@ -59,7 +67,8 @@ p {
 }
 
 nav {
-    background-color: #fefdf9;
+    /*background-color: #fefdf9;*/
+    background-color: #ede2ee;
     height: 8vh;
     width: 100vw;
     z-index: 100;
@@ -71,7 +80,8 @@ nav {
     text-align: right;
     display: flex;
     flex-direction: column;
-    background-color: #fefdf9;
+    /*background-color: #fefdf9;*/
+    background-color: #ede2ee;
     width: 100vw;
 }
 
@@ -199,7 +209,60 @@ footer {
     grid-area: forside_txt;
 }
 
+/** Shop **/
+
+#shop {
+    /*Container-element for sidemenu*/
+    padding: 100px 0 0 0;
+}
+
+
+#liste {
+    /*Her indsættes json dataen*/
+    display: grid;
+    /*Dataen opstilles vha. grid*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /*Fortæller antal kollonner og bredde på kolonner*/
+    grid-gap: 1.5rem;
+    /*Mellemrum mellem kolonnerne*/
+    width: 60vw;
+    margin: 1vw auto;
+}
+
+#liste .smykke {
+    /*Indhold fra data*/
+    text-align: center;
+    /*Indholde placeres centralt*/
+    cursor: pointer;
+    border: none;
+}
+
+#sidebar {
+    /*Menu i siden*/
+    position: sticky;
+    /*Menuen sidder fast når man scroller*/
+    top: 55px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    /*Menuenpunkterne flexer ved siden af hinanden*/
+    width: 90vw;
+    margin: auto;
+}
+
+.valgt {
+    /*Klassen som bliver tilføjet knappen når den er blevet trykket på*/
+    background-color: #8DA187;
+    color: black;
+}
+
 /** Custom orders **/
+
+/** About **/
+
+#about_video {
+    height: 60vh;
+}
 
 /** media queries **/
 
@@ -244,4 +307,41 @@ footer {
         grid-template-areas:
             "forside_portrait forside_txt";
     }
+
+    /** shop **/
+
+    #shop {
+        padding: 150px 0 0 0;
+        margin: 0 8vw;
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "sidebar liste liste liste"
+    }
+
+
+    #liste {
+        grid-area: liste;
+        width: 60vw;
+        margin: auto;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 12vw;
+        grid-area: sidebar;
+        width: 20vw;
+        margin: 0;
+        flex-direction: column;
+        left: 8vw;
+    }
+
+    #sidebar button:hover {
+        transform: scale(1.03);
+    }
+
+    #liste .smykke:hover {
+        transform: scale(1.02);
+    }
+
 }

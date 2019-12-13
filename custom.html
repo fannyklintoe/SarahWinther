@@ -196,6 +196,24 @@ input[type=submit]:hover {
         dots[slideIndex - 1].className += " active";
     }
 
+<<<<<<< HEAD
+=======
+    const url = "http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/74";
+
+    document.addEventListener("DOMContentLoaded", start);
+
+    function start() {
+        hentJson();
+    }
+
+    async function hentJson() {
+        const response = await fetch(url);
+        console.log(response);
+        side = await response.json();
+        console.log(customtext);
+        visData();
+    }
+>>>>>>> origin/master
 
 </script>
 </head>
