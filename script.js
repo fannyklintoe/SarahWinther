@@ -6,6 +6,10 @@ let filterKnapper = document.querySelectorAll("#sidebar button");
 const skabelon = document.querySelector("template").content;
 const liste = document.querySelector("#liste");
 
+//produkt
+
+
+
 function start() {
     console.log("start");
 
@@ -17,6 +21,10 @@ function start() {
 
     if (document.querySelector("#forside")) {
         hentForsideJson();
+    }
+
+    if (document.querySelector("#product")) {
+        hentProduktData();
     }
 }
 
@@ -102,7 +110,31 @@ function visShopData() {
 
             liste.appendChild(klon);
 
+            liste.lastElementChild.addEventListener("click", () => {
+                location.href = `product.html?id=${smykke.slug}`;
+            })
+
         }
 
+    })
+}
+
+async function hentProduktData() {
+    const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/smykke");
+    smykker = await response.json();
+    visProduktData();
+}
+
+function visProduktData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const slug = urlParams.get("id");
+    console.log(slug);
+
+    smykker.forEach(smykke => {
+        if (smykke.slug == slug) {
+            document.querySelector("img").src = smykke.billede_1.guid;
+
+            document.querySelector("p").textContent = smykke.beskrivelse;
+        }
     })
 }
