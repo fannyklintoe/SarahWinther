@@ -40,6 +40,14 @@ a:hover {}
     background-color: #c294bb;
 }
 
+h2 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+
+}
+
 h3 {
     font-family: 'Poiret One', cursive;
     font-weight: bold;
@@ -277,8 +285,8 @@ footer {
     display: grid;
     grid-gap: 1.6rem;
     grid-template-areas:
-        "forside_txt"
-        "forside_portrait"
+        "about_txt"
+        "about_portrait"
     ;
 }
 
@@ -289,11 +297,11 @@ footer {
     width: 450px;
     flex-basis: 1;
     flex-grow: 200px;
-    grid-area: forside_portrait;
+    grid-area: about_portrait;
 }
 
 #about_txt {
-    grid-area: forside_txt;
+    grid-area: about_txt;
     margin-top: 5vw;
 }
 
