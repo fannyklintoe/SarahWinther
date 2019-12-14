@@ -42,8 +42,18 @@ a:hover {}
     background-color: #c294bb;
 }
 
+
 button {
     font-family: 'Poiret One', cursive;
+}
+
+h2 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+
+
 }
 
 h3 {
@@ -297,11 +307,39 @@ footer {
 #video {
     display: flex;
     flex-direction: column;
+    padding-top: 15vw;
 }
 
 #about_video {
     height: 60vh;
 }
+
+#about_wrapper {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1.6rem;
+    grid-template-areas:
+        "about_txt"
+        "about_portrait"
+    ;
+}
+
+#about_portrait {
+    background-image: url(img/portrait.jpg);
+    background-size: 100%;
+    height: 508.5px;
+    width: 450px;
+    flex-basis: 1;
+    flex-grow: 200px;
+    grid-area: about_portrait;
+}
+
+#about_txt {
+    grid-area: about_txt;
+    margin-top: 5vw;
+}
+
 
 /** media queries **/
 
@@ -366,12 +404,16 @@ footer {
 
     #sidebar {
         position: fixed;
-        top: 12vw;
+        top: 150px;
         grid-area: sidebar;
         width: 20vw;
         margin: 0;
         flex-direction: column;
-        left: 8vw;
+        left: 10px;
+    }
+
+    #sidebar button {
+        text-align: left;
     }
 
     #sidebar button:hover {
@@ -444,6 +486,15 @@ footer {
     #smykkearticle .button {
         width: 40vw;
         height: 20px;
+    }
+}
+
+@media(min-width: 900px) {
+
+    /** shop **/
+
+    #sidebar {
+        left: 80px;
     }
 }
 
