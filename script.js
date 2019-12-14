@@ -191,6 +191,3 @@ async function hentAboutJson() {
 function visAboutJson() {
     document.querySelector("#about_txt").innerHTML = side.content.rendered;
 }
-
-/*
---------Footer------------*/
