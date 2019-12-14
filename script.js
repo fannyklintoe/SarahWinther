@@ -10,6 +10,7 @@ function start() {
     console.log("start");
 
     hentHeader();
+    hentFooter();
 
     if (document.querySelector("#shop")) {
         startShop();
@@ -34,6 +35,12 @@ async function hentHeader() {
     console.log("header vises");
 
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+}
+async function hentFooter() {
+    const footer = await fetch("inc/footer.html");
+    const footerIncluding = await footer.text();
+    document.querySelector("footer").innerHTML = footerIncluding;
+    console.log("footer vises");
 }
 
 function toggleMenu() { //denne funktionen får burgermenuen til at virke
@@ -187,10 +194,3 @@ function visAboutJson() {
 
 /*
 --------Footer------------*/
-
-async function hentFooter() {
-    const footer = await fetch("inc/footer.html");
-    const including = await footer.text();
-    document.querySelector("footer").innerHTML = including;
-    console.log(footer);
-}
