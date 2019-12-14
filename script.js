@@ -184,3 +184,13 @@ async function hentAboutJson() {
 function visAboutJson() {
     document.querySelector("#about_txt").innerHTML = side.content.rendered;
 }
+
+/*
+--------Footer------------*/
+
+async function hentFooter() {
+    const footer = await fetch("inc/footer.html");
+    const including = await footer.text();
+    document.querySelector("footer").innerHTML = including;
+    console.log(footer);
+}
