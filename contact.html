@@ -12,20 +12,123 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
+
+    <style>
+        h1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: center;
+            margin: 10px;
+            padding-top: 180px;
+            font: 'Poiret One', cursive;
+        }
+
+        #section_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-content: space-between;
+            font: 'Poiret One', cursive;
+            padding: 30px;
+
+        }
+
+        input[type=text], select, textarea {
+width: 100%; /* Full width
+padding: 12px; /* Some padding */
+border: 1px solid #ccc; /* Gray border */
+border-radius: 4px; /* Rounded borders */
+box-sizing: border-box; /* Make sure that padding and width stays in place */
+margin-top: 6px; /* Add a top margin */
+margin-bottom: 16px; /* Bottom margin */
+resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+background-color: deeppink;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: lightpink;
+}/*
+        //styling af contact///*/
+ .contact{
+            position: relative;
+            margin: auto;
+            padding: 100px;
+            justify-content: center;
+
+        }
+
+        .contact_container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+align-content: space-between;
+            margin: auto;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: beige;
+        }
+
+
+    </style>
 </head>
 
 <body>
     <header></header>
     <section id="kontakt">
+        <h1>Contact</h1>
         <div id="section_wrapper">
-            <div class="åbeningstide">
 
+            <div class="adresse">
+                <h4>Adresse</h4>
+                <p>STUDIO 13O<br><br>
+                    Gammel Kongevej 130<br>
+                    1850 Frederiksberg C</p>
             </div>
+            <div class="aabningstider">
+                <h4>Åbningstider</h4>
+                <br>Monday - Closed<br><br>Tuesday - Closed<br><br>Wednesday 12-18<br><br>Thursday 12-18<br><br>Friday 12-18<br><br>Saturday 11-16<br>
+                <p>Sunday - Closed<br>
+                </p>
+            </div>
+
             <div class="map">
                 <iframe src="https://www.google.com/maps/place/Sarah+Winther+-+Handcrafted+Jewellery/@55.6767204,12.538492,17z/data=!3m1!4b1!4m5!3m4!1s0x465253f840b8794d:0x2d18989dc94c4b5d!8m2!3d55.6767204!4d12.5406807" frameborder="0" allowfullscreen></iframe>
 
             </div>
         </div>
+        <section class="contact">
+            <div class="contact_container">
+                <form action="action_page.php">
+
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email" placeholder="E-mail...">
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">
+
+                </form>
+            </div>
+        </section>
     </section>
     <footer></footer>
     <script src="script.js"></script>
