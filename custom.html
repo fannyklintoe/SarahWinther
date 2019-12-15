@@ -19,18 +19,22 @@
 
         .slideshow{
             display: flex;
-             flex-direction: row;
+            flex-direction: row;
             align-content: center;
             justify-content: space-between;
+            margin: auto;
+            padding-top: 200px;
         }
         .slideshow-container {
-            max-width: 480px;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
             position: relative;
-            float: left;
             justify-content: space-around;
+            align-content: center;
             margin: auto;
-            padding-top: 180px;
-            background-color: aqua;
+            padding: 50px;
+
 
         }
 
@@ -81,45 +85,21 @@
             background-color: #717171;
         }
 
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        .slideshow{
+        .text{
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
-            background-color: orangered;
-            padding-top: 200px;
-
+            justify-content: space-around;
+            align-content: center;
+            margin: auto;
+            padding-top: 400px;
         }
 
 
-input[type=text], select, textarea {
-width: 100%; /* Full width */
+
+
+        input[type=text], select, textarea {
+width: 100%; /* Full width
 padding: 12px; /* Some padding */
 border: 1px solid #ccc; /* Gray border */
 border-radius: 4px; /* Rounded borders */
@@ -131,7 +111,7 @@ resize: vertical /* Allow the user to vertically resize the textarea (not horizo
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-background-color: #4CAF50;
+background-color: deeppink;
 color: white;
 padding: 12px 20px;
 border: none;
@@ -141,88 +121,30 @@ cursor: pointer;
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
-}
+  background-color: lightpink;
+}/*
+        //styling af contact///*/
+   .contact{
+            position: relative;
+            margin: auto;
+            padding: 100px;
+            justify-content: center;
 
+        }
 
         .contact_container{
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+align-content: space-between;
             margin: auto;
             padding: 10px;
             box-sizing: border-box;
             background-color: beige;
         }
-        .contact{
-            position: relative;
-            margin: auto;
-            padding: 30px;
-            justify-content: center;
 
-        }
-        .article{
-            display: flex;
-            margin: auto;
-            box-sizing: border-box;
-            background-color: aqua;
-        }
 
 </style>
-
-    <script>
-        var slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-
-<<<<<<< HEAD
-=======
-    const url = "http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/74";
-
-    document.addEventListener("DOMContentLoaded", start);
-
-    function start() {
-        hentJson();
-    }
-
-    async function hentJson() {
-        const response = await fetch(url);
-        console.log(response);
-        side = await response.json();
-        console.log(customtext);
-        visData();
-    }
->>>>>>> origin/master
-
-
-</script>
 </head>
 
 <body>
@@ -305,9 +227,14 @@ input[type=submit]:hover {
 
             <p>I design and create every engagement ring and set of wedding bands for the specific couple.<br>
 
-                I work in gold (14 or 18 karat), white-gold (14 or 18 karat) and 925 sterling silver. All the stones I use are either fairtrade diamonds or natural gemstones mined under sustainable conditions for both the miners, stone-cutters and the environment.<br>
+                <br>I work in gold (14 or 18 karat), white-gold (14 or 18 karat) and 925 sterling silver. All the stones I use are either fairtrade diamonds or natural gemstones mined under sustainable conditions for both the miners, stone-cutters and the environment.<br>
 
-                The price varies depending on design (width, thickness, size etc.) and material choice.</p>
+                <br>The price varies depending on design (width, thickness, size etc.) and material choice.<br><br>We will start by looking and trying on rings with different looks, surface structures and materials. <br>Together we will talk and sketch until we have designed a set of rings exactly as you wish. If you want a stone in one or both rings this is also decided on this meeting.<br>
+
+                <br>If you are unable to come by for a meeting in Copenhagen we can do it by email or phone.<br>
+
+
+                <br>If you have any questions or want to book a meeting, don't hesitate to send an email to hello@sarahwinther.com or use the contact formular below.</p>
 
         </div>
     </section>
@@ -336,7 +263,59 @@ input[type=submit]:hover {
     </section>
 
 
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        /*<<<<<<< HEAD
+        =======
+            const url = "http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/74";
+
+            document.addEventListener("DOMContentLoaded", start);
+
+            function start() {
+                hentJson();
+            }
+
+            async function hentJson() {
+                const response = await fetch(url);
+                console.log(response);
+                side = await response.json();
+                console.log(customtext);
+                visData();
+            }
+        >>>>>>> origin/master*/
+    </script>
 
     <footer></footer>
     <script src="script.js"></script>
