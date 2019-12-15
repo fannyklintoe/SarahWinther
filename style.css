@@ -47,6 +47,14 @@ button {
     font-family: 'Poiret One', cursive;
 }
 
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    align-self: center;
+
+}
+
 h2 {
     font-family: 'Poiret One', cursive;
     font-weight: bold;
@@ -562,6 +570,18 @@ nav {
     #sidebar {
         left: 80px;
     }
+
+    /** About **/
+
+
+    #about_wrapper {
+        margin-top: 4vw;
+        grid-template-areas:
+            "about_portrait . about_txt"
+
+        ;
+    }
+
 }
 
 /*
