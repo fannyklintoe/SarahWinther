@@ -72,7 +72,7 @@ h4 {
 
 p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: lighter;
 }
 
@@ -338,7 +338,21 @@ nav {
 }
 
 #smykkearticle .button {
+    width: 86vw;
+    margin: 0;
+}
+
+#size_form {
+    border: none;
+    height: 50px;
+}
+
+#size_options {
+    height: 40px;
     width: 90vw;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
 /** Custom orders **/
@@ -454,6 +468,7 @@ nav {
 
     #sidebar button {
         text-align: left;
+        border: none;
     }
 
     #sidebar button:hover {
@@ -480,6 +495,7 @@ nav {
             "billede_1 fragt"
             "billede_1 info"
             "billede_1 pris"
+            "billede_1 size_form"
             "billede_1 knap";
     }
 
@@ -515,6 +531,11 @@ nav {
         grid-area: info;
     }
 
+    #size_form {
+        grid-area: size_form;
+        height: 40px;
+    }
+
     #addtocart {
         grid-area: knap;
     }
@@ -524,8 +545,13 @@ nav {
     }
 
     #smykkearticle .button {
-        width: 40vw;
+        width: 38.5vw;
         height: 20px;
+    }
+
+    #size_options {
+        width: 100px;
+        width: 40vw;
     }
 }
 
