@@ -132,10 +132,11 @@ nav {
     overflow: hidden;
 }
 
+
 .dropdown .dropbtn {
-    margin: 1vw 5vw;
-    font-size: 2rem;
-    cursor: pointer;
+    padding: 2vw 5vw;
+    text-decoration: none;
+    font-size: 1.5rem;
     font-family: 'Poiret One', cursive;
     font-weight: bold;
     border: none;
