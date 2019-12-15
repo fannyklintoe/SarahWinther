@@ -26,6 +26,10 @@ function start() {
     if (document.querySelector("#about")) {
         hentAboutJson();
     }
+
+    if (document.querySelector("#studio")) {
+        hentStudioData();
+    }
 }
 
 async function hentHeader() {
@@ -190,4 +194,19 @@ async function hentAboutJson() {
 
 function visAboutJson() {
     document.querySelector("#about_txt").innerHTML = side.content.rendered;
+}
+
+async function hentStudioData() {
+    console.log("henter studio tekst");
+
+    const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/102");
+    console.log(response);
+    side = await response.json();
+    console.log(side);
+    visStudioData();
+}
+
+function visStudioData() {
+    document.querySelector("h3").textContent = side.title.rendered;
+    document.querySelector("#studio_txt").innerHTML = side.content.rendered;
 }
