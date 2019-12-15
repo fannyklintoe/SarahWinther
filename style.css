@@ -570,6 +570,18 @@ nav {
     #sidebar {
         left: 80px;
     }
+
+    /** About **/
+
+
+    #about_wrapper {
+        margin-top: 4vw;
+        grid-template-areas:
+            "about_portrait . about_txt"
+
+        ;
+    }
+
 }
 
 /*
