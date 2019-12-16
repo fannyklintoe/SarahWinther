@@ -1,4 +1,8 @@
+let billedArray;
+let galleri_taeller = -1;
+
 window.addEventListener("DOMContentLoaded", start);
+
 const urlParams = new URLSearchParams(window.location.search);
 let smykker = [];
 let filter = "alle";
@@ -22,7 +26,11 @@ function start() {
 
     if (document.querySelector("#product")) {
         hentProduktData();
+        document.querySelector(".prev").addEventListener("click", klikPrev);
+        document.querySelector(".next").addEventListener("click", klikNext);
+
     }
+
     if (document.querySelector("#about")) {
         hentAboutJson();
     }
@@ -166,15 +174,14 @@ function visProduktData() {
 
             document.querySelector("#produkt_titel").textContent = smykke.title.rendered;
 
-            document.querySelector("#billede_1").src = smykke.billede_1.guid;
-
-            document.querySelector("#billede_2").src = smykke.billede_2.guid;
-
             document.querySelector("#produkt_beskrivelse").textContent = smykke.beskrivelse;
 
             document.querySelector("#produkt_fragt").textContent = smykke.fragt;
 
             document.querySelector("#produkt_pris").textContent = "Pris: " + smykke.pris + " DKK";
+
+            billedArray = smykke.billeder;
+            klikNext();
         }
     })
 
@@ -182,6 +189,29 @@ function visProduktData() {
         history.back();
     })
 }
+
+function klikNext() {
+    console.log(klikPrev);
+    galleri_taeller++;
+    if (galleri_taeller == billedArray.length) {
+        galleri_taeller = 0;
+    }
+    document.querySelector(".product_billede").src = billedArray[galleri_taeller].guid;
+
+}
+
+function klikPrev() {
+    console.log(klikPrev);
+    galleri_taeller--;
+
+    if (galleri_taeller < 0) {
+        galleri_taeller = billedArray.length - 1;
+    }
+
+    document.querySelector(".product_billede").src = billedArray[galleri_taeller].guid;
+
+}
+
 async function hentAboutJson() {
     console.log("starter about")
 

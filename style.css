@@ -3,8 +3,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fefdf9;
-    /**background-image: url(img/background.png);**/
+    /*background-color: #fefdf9;*/
+    background-image: url(img/background.png);
     background-size: 100%;
     height: 100%;
     width: 100%;
@@ -213,6 +213,8 @@ nav {
     cursor: pointer;
     position: relative;
     margin: 1vh auto;
+    flex-basis: 1;
+    flex-grow: 200px;
 }
 
 .forside_smykke:hover {
@@ -307,6 +309,7 @@ nav {
     /*Mellemrum mellem kolonnerne*/
     width: 60vw;
     margin: 30px auto;
+    padding: 0 0 150px 0;
 }
 
 #liste .smykke {
@@ -347,6 +350,26 @@ nav {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+#billede_1 {
+    position: relative;
+}
+
+.prev,
+.next {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    top: 200px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
 }
 
 #smykkearticle {
@@ -614,7 +637,7 @@ nav {
     }
 
     #smykkearticle {
-        margin: 170px 5vw;
+        margin: 170px auto;
         display: grid;
         grid-gap: 0 1rem;
         grid-template-areas:
@@ -635,10 +658,6 @@ nav {
         grid-area: billede_1;
         width: 40vw;
         margin: 10px;
-    }
-
-    #billede_2 {
-        grid-area: billede_2;
     }
 
     #produkt_beskrivelse {
@@ -758,12 +777,13 @@ nav {
 /*
 -------FOOTER------*/
 footer {
-    background-color: red;
-    height: 10vh;
     width: 100vw;
     z-index: 100;
     position: relative;
     bottom: 0;
+    padding: 2vh;
+    background-image: url(img/footer_img2.svg);
+    background-size: 100%;
 }
 
 .knapper {
@@ -790,7 +810,6 @@ footer h3 {
     display: flex;
     justify-content: flex-end;
     align-content: space-around;
-
 }
 
 footer img {
@@ -806,7 +825,7 @@ footer img {
 }
 
 .instagram {
-    /*  cursor: pointer;*/
+    cursor: pointer;
     background-image: url(img/SVG/instagram.svg);
     background-size: 100%;
     height: 4vw;
