@@ -1,4 +1,8 @@
+let billedArray;
+let galleri_taeller = -1;
+
 window.addEventListener("DOMContentLoaded", start);
+
 const urlParams = new URLSearchParams(window.location.search);
 let smykker = [];
 let filter = "alle";
@@ -22,9 +26,17 @@ function start() {
 
     if (document.querySelector("#product")) {
         hentProduktData();
+        document.querySelector(".prev").addEventListener("click", klikPrev);
+        document.querySelector(".next").addEventListener("click", klikNext);
+
     }
+
     if (document.querySelector("#about")) {
         hentAboutJson();
+    }
+
+    if (document.querySelector("#studio")) {
+        hentStudioData();
     }
 }
 
@@ -162,15 +174,14 @@ function visProduktData() {
 
             document.querySelector("#produkt_titel").textContent = smykke.title.rendered;
 
-            document.querySelector("#billede_1").src = smykke.billede_1.guid;
-
-            document.querySelector("#billede_2").src = smykke.billede_2.guid;
-
             document.querySelector("#produkt_beskrivelse").textContent = smykke.beskrivelse;
 
             document.querySelector("#produkt_fragt").textContent = smykke.fragt;
 
             document.querySelector("#produkt_pris").textContent = "Pris: " + smykke.pris + " DKK";
+
+            billedArray = smykke.billeder;
+            klikNext();
         }
     })
 
@@ -178,6 +189,29 @@ function visProduktData() {
         history.back();
     })
 }
+
+function klikNext() {
+    console.log(klikPrev);
+    galleri_taeller++;
+    if (galleri_taeller == billedArray.length) {
+        galleri_taeller = 0;
+    }
+    document.querySelector(".product_billede").src = billedArray[galleri_taeller].guid;
+
+}
+
+function klikPrev() {
+    console.log(klikPrev);
+    galleri_taeller--;
+
+    if (galleri_taeller < 0) {
+        galleri_taeller = billedArray.length - 1;
+    }
+
+    document.querySelector(".product_billede").src = billedArray[galleri_taeller].guid;
+
+}
+
 async function hentAboutJson() {
     console.log("starter about")
 
@@ -190,4 +224,19 @@ async function hentAboutJson() {
 
 function visAboutJson() {
     document.querySelector("#about_txt").innerHTML = side.content.rendered;
+}
+
+async function hentStudioData() {
+    console.log("henter studio tekst");
+
+    const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/pages/102");
+    console.log(response);
+    side = await response.json();
+    console.log(side);
+    visStudioData();
+}
+
+function visStudioData() {
+    document.querySelector("h3").textContent = side.title.rendered;
+    document.querySelector("#studio_txt").innerHTML = side.content.rendered;
 }
