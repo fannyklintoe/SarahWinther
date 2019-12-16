@@ -437,7 +437,7 @@ nav {
 
 #about_txt {
     grid-area: about_txt;
-    margin-top: 5vw;
+    margin-top: 2vw;
 }
 
 /** Studio **/
@@ -755,7 +755,7 @@ nav {
 
 
     #about_wrapper {
-        margin-top: 4vw;
+        margin: 8vw;
         grid-template-areas:
             "about_portrait . about_txt"
 
