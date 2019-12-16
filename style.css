@@ -581,6 +581,96 @@ nav {
     margin: 0;
 }
 
+/*
+-------FOOTER------*/
+footer {
+    width: 100%;
+    z-index: 100;
+    position: relative;
+    bottom: 0;
+    background-image: url(img/footer_img2.svg);
+    background-size: 100%;
+
+}
+
+.form {
+    font-family: 'Poiret One', cursive;
+}
+
+.knapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.knapper a {
+    border: solid 0.5px #ede2ee;
+    padding: 2vw;
+    background-color: #e0cadd;
+
+}
+
+.nyhedsbrev {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: auto;
+    padding: 4vw 2vw 5vw 3vw;
+}
+
+#email input {
+    height: 5vw;
+    width: 50vw;
+    margin: 1vw;
+}
+
+#submit input {
+    height: 5vw;
+    width: 15vw;
+    margin: 1vw;
+}
+
+footer h3 {
+    font-size: 2rem;
+    font-family: 'Poiret One', cursive;
+    padding-bottom: 10px;
+}
+
+.some {
+    display: flex;
+    justify-content: center;
+    margin: 2vw;
+
+}
+
+footer img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.facebook {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    cursor: pointer;
+    background-image: url(img/SVG/facebook.svg);
+    background-size: 100%;
+    height: 4.6vw;
+    width: 5vw;
+
+}
+
+.instagram {
+    cursor: pointer;
+    background-image: url(img/SVG/instagram.svg);
+    background-size: 100%;
+    height: 4.9vw;
+    width: 5vw;
+    margin: auto 3vw;
+}
+
+
 /** media queries **/
 
 @media(min-width: 700px) {
@@ -771,6 +861,63 @@ nav {
     #size_options {
         width: 35vw;
     }
+
+    /*
+-------FOOTER------*/
+
+    .knapper {
+        flex-direction: row;
+        justify-content: space-around;
+
+
+    }
+
+    .knapper a {
+        border: none;
+
+    }
+
+    .nyhedsbrev {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        margin: 4vw 4vw 4vw 10vw;
+        padding: 1vw;
+    }
+
+
+    .some {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+    }
+
+    footer img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .facebook {
+        height: 4.6vw;
+        width: 5vw;
+        margin: auto 4vw;
+
+    }
+
+    .instagram {
+        height: 4.9vw;
+        width: 5vw;
+        margin 4vw;
+    }
+
+    #footerinfo {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
 }
 
 @media(min-width: 900px) {
@@ -817,6 +964,48 @@ nav {
             "studio_pic6 studio_pic7";
     }
 
+    /*
+-------FOOTER------*/
+
+    .nyhedsbrev {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        margin: 4vw 4vw 4vw 10vw;
+        padding: 1vw;
+    }
+
+
+    .some {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+    }
+
+    #email input {
+        height: 3vw;
+        width: 50vw;
+        margin: 1vw;
+    }
+
+
+
+    .facebook {
+        height: 2.8vw;
+        width: 3vw;
+        margin: 9vw 0 0 0;
+
+    }
+
+    .instagram {
+        height: 2.9vw;
+        width: 3vw;
+        margin: 9vw 0 0 0;
+    }
+
+
+
 }
 
 @media(min-width: 1000px) {
@@ -842,78 +1031,5 @@ nav {
             "studio_pic8 studio_pic3 studio_pic7"
             "studio_pic4 studio_pic5 studio_pic6";
     }
-
-}
-
-/*
--------FOOTER------*/
-footer {
-    width: 100%;
-    z-index: 100;
-    position: relative;
-    bottom: 0;
-    background-image: url(img/footer_img2.svg);
-    background-size: 100%;
-}
-
-.form {
-    font-family: 'Poiret One', cursive;
-}
-
-.knapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-}
-
-.nyhedsbrev {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    margin: auto;
-    padding: 10px;
-}
-
-footer h3 {
-    font-size: 2rem;
-    font-family: 'Poiret One', cursive;
-    padding-bottom: 10px;
-}
-
-.some {
-    display: flex;
-    justify-content: flex-end;
-    align-content: space-around;
-}
-
-footer img {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-.facebook {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    cursor: pointer;
-    background-image: url(img/SVG/facebook.svg);
-    background-size: 100%;
-    height: 3vw;
-    width: 3vw;
-}
-
-.instagram {
-    cursor: pointer;
-    background-image: url(img/SVG/instagram.svg);
-    background-size: 100%;
-    height: 3vw;
-    width: 3vw;
-}
-
-#footerinfo {
-    display: flex;
-    flex-wrap: wrap;
 
 }
