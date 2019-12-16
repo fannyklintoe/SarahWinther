@@ -616,6 +616,28 @@ nav {
         display: none;
     }
 
+    /** dropdown**/
+
+
+    .dropdown .dropbtn {
+        font-size: 1.1rem;
+        margin: 1vw 0;
+    }
+
+    .dropdown:hover .dropbtn {
+        font-size: 1.1rem;
+
+    }
+
+    .dropdown-content {
+        width: 20%;
+
+    }
+
+    .dropdown-content a {
+        text-align: left;
+    }
+
     /** forside **/
 
     #splash_video {
