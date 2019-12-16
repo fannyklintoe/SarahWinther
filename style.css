@@ -92,9 +92,13 @@ p {
 #logo {
     background-image: url(img/logo.svg);
     background-size: 100%;
-    width: 300px;
-    height: 80.6px;
-    display: none;
+    width: 150px;
+    height: 40.6px;
+    z-index: 100;
+    position: fixed;
+    top: 1vw;
+
+
 }
 
 nav {
@@ -142,6 +146,7 @@ nav {
 .dropdown {
     float: left;
     overflow: hidden;
+
 }
 
 
@@ -585,6 +590,10 @@ nav {
     #logo {
         display: block;
         margin: 1vh auto 0;
+        width: 300px;
+        height: 80.6px;
+        position: relative;
+        top: 0;
     }
 
     nav {
