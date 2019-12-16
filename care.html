@@ -13,6 +13,16 @@
 
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /*background-color: #fefdf9;*/
+            background-image: url(img/background.png);
+            background-size: 100%;
+            height: 100%;
+            width: 100%;
+        }
+
         img {
             width: 100%;
         }
@@ -32,7 +42,23 @@
             margin: auto;
             padding: 80px;
             font: 'Poiret One', cursive;
+        }
 
+        #care {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+            padding: 100px;
+        }
+
+        #billede {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-around;
+            margin: auto;
+            padding: 100px;
         }
     </style>
 </head>
@@ -42,7 +68,8 @@
     <section id="Care">
         <h1>Product Care</h1>
         <div id="section_wrapper">
-            <img src="img/ringe10.JPG" alt="productcare">
+            <div id="billede">
+                <img src="img/IMG_8400.JPG" alt="productcare"></div>
             <div class="text1">
                 <p>
                     Every piece of jewellery is handcrafted in my studio in Copenhagen.<br><br>
