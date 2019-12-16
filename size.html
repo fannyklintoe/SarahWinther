@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarah Winther</title>
+
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
@@ -12,53 +13,27 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /*background-color: #fefdf9;*/
+            background-image: url(img/background.png);
+            background-size: 100%;
+            height: 100%;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+
         h1 {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-content: space-around;
             padding-top: 200px;
             font: 'Poiret One', cursive;
-        }
-
-        .text1 {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            align-content: space-between;
-            margin: auto;
-            padding: 80px;
-            font: 'Poiret One', cursive;
-
-        }
-
-        .text2 {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            align-content: space-between;
-            margin: auto;
-            padding: 80px;
-            font: 'Poiret One', cursive;
-
         }
 
     </style>
@@ -68,32 +43,35 @@
     <header></header>
     <section id="size">
         <h1>Size Guide</h1>
-        <div id="section_wrapper">
-            <div class="text1">
-                <p>
-                    Are you uncertain of your ring size? You can easily find it by measuring one of your rings, as shown in the picture below.<br><br>
+        <div class="text1">
+            <p>
+                Are you uncertain of your ring size? You can easily find it by measuring one of your rings, as shown in the picture below.<br><br>
 
-                    Sarah_Winther_ring_size_guide.jpg1. Measure the inner diameter in mm.<br><br>
+                Sarah_Winther_ring_size_guide.jpg1. Measure the inner diameter in mm.<br><br>
 
-                    2. Calculate your ring size using this formula:<br><br>
-                    Inner diameter> x 3,14 = your ring size<br><br>
+                2. Calculate your ring size using this formula:<br><br>
+                Inner diameter> x 3,14 = your ring size<br><br>
 
-                    Example:<br><br>
-                    You have measured the inner diameter to 17, 1 mm<br><br>
-                    17,1 x 3,14 = 53,7<br><br>
-                    Your ring size is therefore 54.<br><br>
+                Example:<br><br>
+                You have measured the inner diameter to 17, 1 mm<br><br>
+                17,1 x 3,14 = 53,7<br><br>
+                Your ring size is therefore 54.<br><br>
 
 
-                    If you do not have a ring that fits, I recommend that you swing by a goldsmith or jewellery store and have your finger measured to get the accurate size.<br><br>
-                </p>
-                <img src="img/size%20guide.JPG" alt="sizeguide" style="width:100%">
-            </div>
-
-            <div class="text2">
-                <p>In case you know your size in a different size.<br><br>Then you can see how to convert in the picture to the right<br></p>
-                <img src="img/ring%20converter.jpg" alt="ring" style="width:100%">
-            </div>
+                If you do not have a ring that fits, I recommend that you swing by a goldsmith or jewellery store and have your finger measured to get the accurate size.<br><br>
+            </p>
         </div>
+        <div class="billede">
+            <img src="img/size%20guide.JPG" alt="sizeguide" style="width:100%">
+        </div>
+
+    </section>
+    <section id="size">
+        <div class="text2">
+            <p>In case you know your size in a different size.<br><br>Then you can see how to convert in the picture to the right<br></p>
+            <img src="img/ring%20converter.jpg" alt="ring" style="width:100%">
+        </div>
+
 
     </section>
 

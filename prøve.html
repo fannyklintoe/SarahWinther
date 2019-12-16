@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Winther</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /*background-color: #fefdf9;*/
+            background-image: url(img/background.png);
+            background-size: 100%;
+            height: 100%;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        a {
+            font-family: 'Poiret One', cursive;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        a:hover {
+            font-weight: bold;
+        }
+
+        .button {
+            background-color: #e0cadd;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            margin: 0 auto;
+            font-family: 'Poiret One', cursive;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #c294bb;
+        }
+
+
+        button {
+            font-family: 'Poiret One', cursive;
+        }
+
+        h1 {
+            font-family: 'Poiret One', cursive;
+            font-weight: bold;
+            font-size: 3rem;
+            align-self: center;
+
+        }
+
+        h2 {
+            font-family: 'Poiret One', cursive;
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 0;
+
+
+        }
+
+        h3 {
+            font-family: 'Poiret One', cursive;
+            font-weight: bold;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        h4 {
+            font-family: 'Poiret One', cursive;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: lighter;
+        }
+
+        /**header**/
+        #logo {
+            background-image: url(img/logo.svg);
+            background-size: 100%;
+            width: 300px;
+            height: 80.6px;
+            display: none;
+        }
+
+        .navbar {
+            /* overflow: hidden;*/
+            background-color: #ede2ee;
+            height: 55px;
+            width: 100vw;
+            z-index: 100;
+            position: fixed;
+            top: 0;
+        }
+
+        /*#menu {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            background-color: #fefdf9;
+            background-color: #ede2ee;
+            width: 100vw;
+        }
+
+        #menu a:hover {
+            font-weight: bold;
+        }
+
+        #menuknap {
+            text-align: right;
+            margin: 1vw 5vw;
+            font-size: 2rem;
+            cursor: pointer;
+            font-family: 'Poiret One', cursive;
+            font-weight: bold;
+        }
+*/
+        .navbar a {
+            /*float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;*/
+            padding: 2vw 5vw;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-family: 'Poiret One', cursive;
+        }
+
+        .dropdown {
+            /*float: left;*/
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            text-decoration: none;
+            font-family: 'Poiret One', cursive;
+            border: none;
+            outline: none;
+            /*padding: 14px 16px;*/
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+
+        /* .dropdown:hover .dropbtn,
+        .dropbtn:focus {
+            background-color: lightpink;
+        }*/
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: lightpink;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menuknap">☰</div><!-- menuknappen til burgermenuen på mobilversion-->
+    <a href="index.html">
+        <div id="logo"></div>
+    </a>
+    <div class="navbar">
+        <div id="menu" class="hidden">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="custom.html">Custom orders</a>
+            <a href="studio.html">Studio 130</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Info
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="contact.html">Contact</a>
+                    <a href="size.html">Size Guide</a>
+                    <a href="care.html">Product Care</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>Dropdown Menu inside a Navigation Bar</h3>
+    <p>Click on the "Dropdown" link to see the dropdown menu.</p>
+
+    <!-- <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>-->
+</body>
+
+</html>

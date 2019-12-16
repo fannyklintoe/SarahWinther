@@ -14,7 +14,22 @@
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
 
     <style>
-        h1 {
+
+        body {
+    margin: 0;
+    padding: 0;
+    /*background-color: #fefdf9;*/
+    background-image: url(img/background.png);
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
@@ -23,6 +38,34 @@
             padding-top: 180px;
         }
 
+h2 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+
+
+}
+
+h3 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
         #section_wrapper {
             display: flex;
             flex-wrap: wrap;
@@ -40,6 +83,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+
               padding:30px;
         }
         .adresse{
@@ -97,7 +141,10 @@ input[type=submit]:hover {
             box-sizing: border-box;
             background-color: beige;
         }
-
+form {
+            padding-top: 30px;
+            font-family: 'Poiret One', cursive;
+        }
 
     </style>
 </head>
@@ -108,22 +155,21 @@ input[type=submit]:hover {
         <h1>Contact</h1>
         <div id="section_wrapper">
 
-            <div class="adresse">
-                <h4>Adresse</h4>
+            <div class="info_container">
+                <h4>Adress</h4>
                 <p>STUDIO 13O<br><br>
                     Gammel Kongevej 130<br>
                     1850 Frederiksberg C</p>
-            </div>
-            <div class="aabningstider">
-                <h4>Åbningstider</h4>
-                <br>Monday - Closed<br><br>Tuesday - Closed<br><br>Wednesday 12-18<br><br>Thursday 12-18<br><br>Friday 12-18<br><br>Saturday 11-16<br>
-                <p>Sunday - Closed<br>
+
+                <h4>Opening Hours</h4>
+                <p><br>Monday - Closed<br><br>Tuesday - Closed<br><br>Wednesday 12-18<br><br>Thursday 12-18<br><br>Friday 12-18<br><br>Saturday 11-16<br>
+                    <br>Sunday - Closed<br>
                 </p>
             </div>
 
             <div class="map">
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.7055457540373!2d12.53849201592756!3d55.676720380533084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253f840b8794d%3A0x2d18989dc94c4b5d!2sSarah%20Winther%20-%20Handcrafted%20Jewellery!5e0!3m2!1sda!2sdk!4v1576489854847!5m2!1sda!2sdk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.7055457540373!2d12.53849201592756!3d55.676720380533084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253f840b8794d%3A0x2d18989dc94c4b5d!2sSarah%20Winther%20-%20Handcrafted%20Jewellery!5e0!3m2!1sda!2sdk!4v1576489854847!5m2!1sda!2sdk" width="480" height="330" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </div>
         <section class="contact">

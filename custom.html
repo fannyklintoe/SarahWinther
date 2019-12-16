@@ -13,17 +13,22 @@
 
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
     <style>
-        * {
-            box-sizing: border-box;
-        }
 
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-content: space-around;
+            padding-top: 200px;
+            font: 'Poiret One', cursive;
+        }
         .slideshow{
             display: flex;
             flex-direction: row;
             align-content: center;
             justify-content: space-between;
             margin: auto;
-            padding-top: 200px;
+            padding: 30px;
+
         }
         .slideshow-container {
             display: flex;
@@ -88,17 +93,12 @@
         .text{
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row;
             justify-content: space-around;
-            align-content: center;
             margin: auto;
-            padding-top: 400px;
+            padding-right: 40px;
         }
 
-
-
-
-        input[type=text], select, textarea {
+    input[type=text], select, textarea {
 width: 100%; /* Full width
 padding: 12px; /* Some padding */
 border: 1px solid #ccc; /* Gray border */
@@ -124,7 +124,7 @@ input[type=submit]:hover {
   background-color: lightpink;
 }/*
         //styling af contact///*/
-   .contact{
+ .contact{
             position: relative;
             margin: auto;
             padding: 100px;
@@ -136,11 +136,15 @@ input[type=submit]:hover {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-align-content: space-between;
+            align-content: space-around;
             margin: auto;
             padding: 10px;
             box-sizing: border-box;
             background-color: beige;
+        }
+form {
+            padding-top: 30px;
+            font-family: 'Poiret One', cursive;
         }
 
 
@@ -150,8 +154,11 @@ align-content: space-between;
 <body>
     <header></header>
 
-
+    <section id="overskrift">
+        <h1>Custom order</h1>
+    </section>
     <section class="slideshow">
+
         <div class="slideshow-container">
 
             <div class="mySlides fade">
@@ -225,7 +232,7 @@ align-content: space-between;
         </div>
         <div class="tekst">
 
-            <p>I design and create every engagement ring and set of wedding bands for the specific couple.<br>
+            <p><br>I design and create every engagement ring and set of wedding bands for the specific couple.<br>
 
                 <br>I work in gold (14 or 18 karat), white-gold (14 or 18 karat) and 925 sterling silver. All the stones I use are either fairtrade diamonds or natural gemstones mined under sustainable conditions for both the miners, stone-cutters and the environment.<br>
 
