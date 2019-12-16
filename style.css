@@ -809,7 +809,7 @@ nav {
 /*
 -------FOOTER------*/
 footer {
-    width: 100vw;
+    width: 100%;
     z-index: 100;
     position: relative;
     bottom: 0;
@@ -818,8 +818,13 @@ footer {
     background-size: 100%;
 }
 
+.form {
+    font-family: 'Poiret One', cursive;
+}
+
 .knapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
 }
@@ -834,7 +839,7 @@ footer {
 
 footer h3 {
     font-size: 2rem;
-    font: 'Poiret One', cursive;
+    font-family: 'Poiret One', cursive;
     padding-bottom: 10px;
 }
 
@@ -846,20 +851,31 @@ footer h3 {
 
 footer img {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .facebook {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     cursor: pointer;
     background-image: url(img/SVG/facebook.svg);
     background-size: 100%;
-    height: 4vw;
-    width: 4vw;
+    height: 3vw;
+    width: 3vw;
 }
 
 .instagram {
     cursor: pointer;
     background-image: url(img/SVG/instagram.svg);
     background-size: 100%;
-    height: 4vw;
-    width: 4vw;
+    height: 3vw;
+    width: 3vw;
+}
+
+#footerinfo {
+    display: flex;
+    flex-wrap: wrap;
+
 }
