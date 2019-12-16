@@ -708,7 +708,8 @@ nav {
     }
 
     #smykkearticle {
-        margin: 170px auto;
+        width: 75vw;
+        margin: 140px auto;
         display: grid;
         grid-gap: 0 1rem;
         grid-template-areas:
@@ -727,7 +728,7 @@ nav {
 
     #billede_1 {
         grid-area: billede_1;
-        width: 40vw;
+        width: 400px;
         margin: 10px;
     }
 
@@ -763,13 +764,12 @@ nav {
     }
 
     #smykkearticle .button {
-        width: 38.5vw;
+        width: 35vw;
         height: 20px;
     }
 
     #size_options {
-        width: 100px;
-        width: 40vw;
+        width: 35vw;
     }
 }
 
