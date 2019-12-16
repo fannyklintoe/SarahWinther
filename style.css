@@ -852,7 +852,6 @@ footer {
     z-index: 100;
     position: relative;
     bottom: 0;
-    padding: 2vh;
     background-image: url(img/footer_img2.svg);
     background-size: 100%;
 }
