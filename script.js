@@ -4,11 +4,13 @@ let galleri_taeller = -1;
 window.addEventListener("DOMContentLoaded", start);
 
 const urlParams = new URLSearchParams(window.location.search);
+
 let smykker = [];
 let filter = "alle";
+
 let filterKnapper = document.querySelectorAll("#sidebar button");
-const skabelon = document.querySelector("template").content;
-const liste = document.querySelector("#liste");
+
+let forhandlere = [];
 
 function start() {
     console.log("start");
@@ -16,12 +18,12 @@ function start() {
     hentHeader();
     hentFooter();
 
-    if (document.querySelector("#shop")) {
-        startShop();
-    }
-
     if (document.querySelector("#forside")) {
         hentForsideJson();
+    }
+
+    if (document.querySelector("#shop")) {
+        startShop();
     }
 
     if (document.querySelector("#product")) {
@@ -38,9 +40,13 @@ function start() {
     if (document.querySelector("#studio")) {
         hentStudioData();
     }
+
+    if (document.querySelector("#forhandler")) {
+        hentForhandlerData();
+    }
 }
 
-async function hentHeader() {
+async function hentHeader() { //her hentes headeren fra header.html
     const headerMenu = await fetch("inc/header.html");
     const headerIncluding = await headerMenu.text();
     document.querySelector("header").innerHTML = headerIncluding;
@@ -48,7 +54,7 @@ async function hentHeader() {
 
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 }
-async function hentFooter() {
+async function hentFooter() { //her hentes footeren fra footer.html
     const footer = await fetch("inc/footer.html");
     const footerIncluding = await footer.text();
     document.querySelector("footer").innerHTML = footerIncluding;
@@ -70,6 +76,8 @@ function toggleMenu() { //denne funktionen får burgermenuen til at virke
     }
 }
 
+//// Her starter js til Forsiden
+
 async function hentForsideJson() {
     console.log("starter forsiden")
 
@@ -84,7 +92,8 @@ function visForsideJson() {
     document.querySelector("#forside_txt").innerHTML = side.content.rendered;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////// Her starter js til shoppen
+
 function startShop() {
     console.log("start shop");
     document.querySelector("button[data-kategori='alle']").classList.add("valgt");
@@ -137,6 +146,9 @@ function visShopData() {
 
     console.log("viser data")
 
+    const skabelon = document.querySelector("template").content;
+    const liste = document.querySelector("#liste");
+
     liste.textContent = "";
 
     smykker.forEach(smykke => {
@@ -157,6 +169,8 @@ function visShopData() {
 
     })
 }
+
+/// Her starter js til produkt siden
 
 async function hentProduktData() {
     const response = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/smykke");
@@ -212,6 +226,8 @@ function klikPrev() {
 
 }
 
+//// Her starter js til om siden
+
 async function hentAboutJson() {
     console.log("starter about")
 
@@ -226,6 +242,8 @@ function visAboutJson() {
     document.querySelector("#about_txt").innerHTML = side.content.rendered;
 }
 
+/// Her starter js til Studio siden
+
 async function hentStudioData() {
     console.log("henter studio tekst");
 
@@ -239,4 +257,46 @@ async function hentStudioData() {
 function visStudioData() {
     document.querySelector("h3").textContent = side.title.rendered;
     document.querySelector("#studio_txt").innerHTML = side.content.rendered;
+}
+
+/// Her starter js til retailers siden
+
+async function hentForhandlerData() {
+
+    console.log("henter forhandlere");
+
+    let forhandlerData = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/forhandler");
+
+    forhandlere = await forhandlerData.json();
+
+    console.log(forhandler);
+
+    visForhandlerData();
+}
+
+function visForhandlerData() {
+
+    const forhandlerListe = document.querySelector("#forhandler_liste");
+
+    const skabelon = document.querySelector("#forhandler_skabelon").content;
+
+    console.log("viser data")
+    console.log(forhandler);
+    console.log(skabelon);
+    console.log(forhandlerListe);
+
+    forhandlere.forEach(forhandler => {
+        const forhandler_klon = skabelon.cloneNode(true);
+        console.log(forhandler_klon);
+        forhandler_klon.querySelector("#forhandler_titel").textContent = forhandler.navn;
+        forhandler_klon.querySelector("#forhandler_adresse").textContent = forhandler.adresse;
+
+        forhandler_klon.querySelector("#forhandler_land").textContent = forhandler.land;
+        forhandler_klon.querySelector("#forhandler_link").href = forhandler.link;
+
+        forhandler_klon.querySelector("#forhandler_link").textContent = "Forhandlers hjemmeside";
+
+        forhandlerListe.appendChild(forhandler_klon);
+    })
+
 }

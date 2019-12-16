@@ -42,6 +42,7 @@ a:hover {
 
 .button:hover {
     background-color: #c294bb;
+    text-decoration: underline;
 }
 
 
@@ -534,6 +535,37 @@ nav {
     width: 400px;
     height: 600px;
     grid-area: studio_pic8;
+}
+
+
+/** Forhandlere **/
+
+#forhandler {
+    padding: 150px 0 0 0;
+    text-align: center;
+
+}
+
+#forhandler_liste {
+    /*Her indsættes json dataen*/
+    display: grid;
+    /*Dataen opstilles vha. grid*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /*Fortæller antal kollonner og bredde på kolonner*/
+    grid-gap: 1rem;
+    /*Mellemrum mellem kolonnerne*/
+    width: 60vw;
+    margin: 30px auto;
+    text-align: left;
+}
+
+#forhandler_loop {
+    background-color: #ffffff90;
+    padding: 1vw;
+}
+
+.forhandler {
+    margin: 0;
 }
 
 /** media queries **/

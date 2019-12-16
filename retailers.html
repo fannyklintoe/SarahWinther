@@ -12,74 +12,24 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
-
-    <style>
-        #forhandler {
-            display: grid;
-            grid-auto-rows: 1.6px;
-            margin: auto;
-            padding: 10px;
-            background-color: aqua;
-
-        }
-
-        #liste {
-            display: grid;
-            grid-auto-rows: 1.6px;
-            margin: auto;
-            padding: 10px;
-            background-color: red;
-
-        }
-
-    </style>
-    <script>
-        async function hentForhandlerData() {
-
-            let forhandlerData = await fetch("http://jenniferjaque.dk/kea/2-semester/eksamen/sarahwinther_wp/wordpress/wp-json/wp/v2/forhandlere");
-
-            forhandler = await forhandlerData.json();
-
-            visForhandlerData();
-        }
-
-        function visForhandlerData() {
-
-            console.log("viser data")
-
-            smykker.forEach(forhandler => {
-                if (forhandler.categories == filter || filter == "alle") {
-                    const klon = skabelon.cloneNode(true);
-
-
-                    klon.querySelector("#forhandler_h1").textContent = forhandler.beskrivelse;
-                    klon.querySelector("#forhandler_h2").textContent = forhandler.beskrivelse;
-                    klon.querySelector("#forhandler_h3").textContent = forhandler.beskrivelse;
-                    klon.querySelector("#forhandler_h4").textContent = forhandler.beskrivelse;
-                }
-
-            })
-        }
-
-    </script>
 </head>
 
 <body>
     <header></header>
+
     <main id="forhandler">
 
-
-        <template>
-
-            <article id="forhandler_loop" class="forhandler">
-                <h1 id="forhandler_h1"></h1>
-                <h2 id="forhandler_h2"></h2>
-                <h3 id="forhandler_h3"></h3>
-                <h4 id="forhandler_h4"></h4>
+        <h1>Retailers</h1>
+        <template id="forhandler_skabelon">
+            <article id="forhandler_loop">
+                <h4 class="forhandler" id="forhandler_titel"></h4>
+                <p class="forhandler" id="forhandler_adresse"></p>
+                <p class="forhandler" id="forhandler_land"></p>
+                <a class="forhandler" id="forhandler_link" href=""></a>
             </article>
         </template>
 
-        <section id="liste"></section>
+        <section id="forhandler_liste"></section>
 
     </main>
 
