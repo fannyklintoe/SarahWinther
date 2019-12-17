@@ -589,7 +589,7 @@ footer {
     z-index: 100;
     position: relative;
     bottom: 0;
-    background-image: url(img/footer_img2.svg);
+    background-image: url(img/gr%C3%B8n.svg);
     background-size: 100%;
 
 }
@@ -607,7 +607,7 @@ footer {
 .knapper a {
     border: solid 0.5px #ede2ee;
     padding: 2vw;
-    background-color: #e0cadd;
+    background-color: #d2e19f;
 
 }
 
@@ -615,8 +615,8 @@ footer {
     display: flex;
     justify-content: space-around;
     align-content: center;
-    margin: auto;
-    padding: 4vw 2vw 5vw 3vw;
+    padding-top: 6vw;
+
 }
 
 #email input {
