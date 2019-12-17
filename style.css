@@ -548,8 +548,9 @@ nav {
 }
 
 /** size Guide**/
-.text1 {
-    margin-top: 200vw;
+#size,
+#size2 {
+    margin: 15vw 4vw 5vw;
 }
 
 /*
@@ -612,7 +613,6 @@ input[type=submit]:hover {
     background-color: lightpink;
 }
 
-/*
 
 footer h3 {
     font-size: 2rem;
@@ -844,6 +844,32 @@ footer img {
 
     #size_options {
         width: 35vw;
+    }
+
+    /** size Guide**/
+
+    #size {
+        margin: 2vw 8vw 5vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #size2 {
+        margin: 2vw 8vw 5vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .size_billede {
+        width: 40vw;
+    }
+
+    #size_overskrift {
+        margin: 15vw 8vw 2vw;
+    }
+
+    #text2 {
+        margin: 0vw 15vw 0vw 10vw;
     }
 
     /*
