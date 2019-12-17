@@ -582,6 +582,11 @@ nav {
     margin: 0;
 }
 
+/** size Guide**/
+.text1 {
+    margin-top: 200vw;
+}
+
 /*
 -------FOOTER------*/
 footer {
