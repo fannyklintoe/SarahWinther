@@ -217,13 +217,14 @@ nav {
     display: flex;
     flex-wrap: wrap;
     padding: 2vh;
-    margin: 5vh auto 0;
+    width: 250px;
+    margin: 5vh auto 1vh;
     justify-content: space-between;
 }
 
 .forside_smykke {
-    height: 220px;
-    width: 220px;
+    height: 250px;
+    width: 250px;
     cursor: pointer;
     position: relative;
     margin: 1vh auto;
@@ -245,7 +246,7 @@ nav {
     bottom: 0%;
     font-family: 'Poiret One', cursive;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 #forside_ringe {
@@ -294,8 +295,10 @@ nav {
 #forside_portrait {
     background-image: url(img/portrait.jpg);
     background-size: 100%;
-    height: 508.5px;
-    width: 450px;
+    /*height: 508.5px;
+    width: 450px;*/
+    height: 282.5px;
+    width: 250px;
     flex-basis: 1;
     flex-grow: 200px;
     grid-area: forside_portrait;
@@ -721,6 +724,9 @@ footer img {
         height: 80vh;
     }
 
+    #smykker_oversigt {
+        width: auto;
+    }
 
     .forside_smykke {
         height: 280px;
@@ -731,6 +737,11 @@ footer img {
         width: 80vw;
         grid-template-areas:
             "forside_portrait forside_txt";
+    }
+
+    #forside_portrait {
+        height: 508.5px;
+        width: 450px;
     }
 
     /** shop **/
