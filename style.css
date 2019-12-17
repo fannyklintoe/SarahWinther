@@ -563,8 +563,9 @@ footer {
     z-index: 100;
     position: relative;
     bottom: 0;
-    background-image: url(img/gr%C3%B8n.svg);
-    background-size: 100%;
+    border: solid 1px white;
+    /**background-image: url(img/lyser%C3%B8d.svg);
+    background-size: 100%;**/
 
 }
 
@@ -581,7 +582,7 @@ footer {
 .knapper a {
     border: solid 0.5px #ede2ee;
     padding: 2vw;
-    background-color: #d2e19f;
+    background-color: #e0cadd;
 
 }
 
