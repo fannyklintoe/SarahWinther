@@ -466,14 +466,10 @@ nav {
     width: 400px;
     margin: auto;
     grid-template-areas:
+        "studio_pic1"
         "title"
         "text"
-        "studio_pic1"
-        "studio_pic2"
         "studio_pic3"
-        "studio_pic4"
-        "studio_pic5"
-        "studio_pic6"
         "studio_pic7"
         "studio_pic8";
 }
@@ -491,49 +487,18 @@ nav {
     background-image: url(studio_img/facade1.JPG);
     background-size: 100%;
     width: 400px;
-    height: 267px;
+    height: 133.5px;
     grid-area: studio_pic1;
 }
 
-#studio_pic2 {
-    background-image: url(studio_img/facade2.JPG);
-    background-size: 100%;
-    width: 400px;
-    height: 267px;
-    grid-area: studio_pic2;
-}
-
 #studio_pic3 {
-    background-image: url(studio_img/montre_hoj.JPG);
-    background-size: 100%;
-    width: 400px;
-    height: 600px;
-    grid-area: studio_pic3;
-}
-
-#studio_pic4 {
     background-image: url(studio_img/montre2.JPG);
     background-size: 100%;
     width: 400px;
     height: 267px;
-    grid-area: studio_pic4;
+    grid-area: studio_pic3;
 }
 
-#studio_pic5 {
-    background-image: url(studio_img/varksted1.JPG);
-    background-size: 100%;
-    width: 400px;
-    height: 267px;
-    grid-area: studio_pic5;
-}
-
-#studio_pic6 {
-    background-image: url(studio_img/varksted2.JPG);
-    background-size: 100%;
-    width: 400px;
-    height: 267px;
-    grid-area: studio_pic6;
-}
 
 #studio_pic7 {
     background-image: url(studio_img/butik_hoj.JPG);
@@ -627,14 +592,27 @@ footer {
 #email input {
     height: 5vw;
     width: 50vw;
-    margin: 1vw;
+    font-family: 'Poiret One', cursive;
 }
 
-#submit input {
-    height: 5vw;
-    width: 15vw;
-    margin: 1vw;
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #e0cadd;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.2rem;
 }
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: lightpink;
+}
+
+/*
 
 footer h3 {
     font-size: 2rem;
@@ -957,17 +935,19 @@ footer img {
     /** Studio **/
 
     #studio_indhold {
-        width: 90vw;
+        width: 800px;
         margin: 200px auto;
         grid-gap: 0.2rem;
         grid-template-areas:
             "title ."
-            "text studio_pic1"
-            "studio_pic2 studio_pic5"
-            "studio_pic8 studio_pic3"
-            "studio_pic8 studio_pic3"
-            "studio_pic4 studio_pic7"
-            "studio_pic6 studio_pic7";
+            "studio_pic1 studio_pic1"
+            "studio_pic3 text"
+            "studio_pic8 studio_pic7";
+    }
+
+    #studio_pic1 {
+        width: 800px;
+        height: 267px;
     }
 
     /*
@@ -1017,16 +997,16 @@ footer img {
 @media(min-width: 1000px) {
 
     /** Studio **/
-    #studio_indhold {
+    /*#studio_indhold {
         width: 80vw;
-    }
+    }*/
 }
 
 @media(min-width: 1200px) {
 
     /** Studio **/
 
-    #studio_indhold {
+    /*#studio_indhold {
         width: 95vw;
         margin: 200px auto;
         grid-gap: 0.2rem;
@@ -1036,6 +1016,6 @@ footer img {
             "studio_pic8 studio_pic3 studio_pic7"
             "studio_pic8 studio_pic3 studio_pic7"
             "studio_pic4 studio_pic5 studio_pic6";
-    }
+    }*/
 
 }
