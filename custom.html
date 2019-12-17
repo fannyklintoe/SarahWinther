@@ -30,138 +30,16 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     <meta title="Sarah Winther Jewellery" content="Fine jewellery with sustainability in focus. Handcrafted in my studio in Copenhagen. Shop online or in my shop Studio 13O, Gammel Kongevej 13O, Frederiksberg.">
-    <style>
 
-        h1 {
-            display: flex;
-            justify-content: center;
-            align-content: space-around;
-            padding-top: 200px;
-            font: 'Poiret One', cursive;
-        }
-        .slideshow{
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            justify-content: space-between;
-            margin: auto;
-            padding: 30px;
-
-        }
-        .slideshow-container {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            position: relative;
-            justify-content: space-around;
-            align-content: center;
-            margin: auto;
-            padding: 50px;
-
-
-        }
-
-
-        /* Hide the images by default */
-        .mySlides {
-            display: none;
-        }
-
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 70%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: black;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* The dots/bullets/indicators */
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-            float: inherit;
-        }
-
-        .active,
-        .dot:hover {
-            background-color: #717171;
-        }
-
-        .text{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: auto;
-            padding-right: 40px;
-        }
-
-    input[type=text], select, textarea {
-width: 100%; /* Full width
-padding: 12px; /* Some padding */
-border: 1px solid #ccc; /* Gray border */
-border-radius: 4px; /* Rounded borders */
-box-sizing: border-box; /* Make sure that padding and width stays in place */
-margin-top: 6px; /* Add a top margin */
-margin-bottom: 16px; /* Bottom margin */
-resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-        //*styling af contact*///
- .contact{
-            position: relative;
-            margin: auto;
-            padding: 100px;
-            justify-content: center;
-
-        }
-
-        .contact_container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: space-around;
-            margin: auto;
-            padding: 10px;
-            box-sizing: border-box;
-            background-color: beige;
-        }
-form {
-            padding-top: 30px;
-            font-family: 'Poiret One', cursive;
-        }
-
-
-</style>
 </head>
 
 <body>
     <header></header>
 
-    <section id="overskrift">
+    <section id="custom_h1">
         <h1>Custom order</h1>
     </section>
-    <section class="slideshow">
+    <section id="Custom_slideshow">
 
         <div class="slideshow-container">
 
@@ -234,7 +112,7 @@ form {
             </div>
 
         </div>
-        <div class="tekst">
+        <div id="custom_text">
 
             <p><br>I design and create every engagement ring and set of wedding bands for the specific couple.<br>
 
@@ -331,6 +209,4 @@ form {
     <footer></footer>
     <script src="script.js"></script>
 
-</body>
-
-</html>
+</body></html>
