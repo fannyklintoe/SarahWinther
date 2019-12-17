@@ -218,7 +218,7 @@ nav {
     flex-wrap: wrap;
     padding: 2vh;
     width: 250px;
-    margin: 5vh auto 1vh;
+    margin: 1vh auto 1vh;
     justify-content: space-between;
 }
 
@@ -281,6 +281,15 @@ nav {
 #forside_knapper .button {
     margin: 0.5vh auto;
 }
+
+/*#forside_om,
+#produkt_detalje,
+.slideshow,
+#studio {
+    background-color: #ffffff90;
+    margin: 0 5vw;
+    padding: 5vh;
+}*/
 
 #om_wrapper {
     width: 90vw;
