@@ -682,6 +682,27 @@ form {
     margin: 15vw 4vw 5vw;
 }
 
+/** produkt care **/
+
+#care_text {
+    margin: 2vw 6vw;
+    padding: 2vw;
+    font: 'Poiret One', cursive;
+}
+
+#care {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#care h1 {
+    margin: 15vw 0vw 0vw 7vw;
+}
+
+#care_billede {
+    margin: 6vw;
+}
+
 /*
 -------FOOTER------*/
 footer {
@@ -1026,7 +1047,8 @@ footer img {
         padding: 1vw;
     }
 
-    .slideshow-container {padding: 5vw;
+    .slideshow-container {
+        padding: 5vw;
         margin: 0;
         width: 150vw;
         height: 20vw;
@@ -1087,6 +1109,29 @@ footer img {
         margin: 0vw 15vw 0vw 10vw;
     }
 
+    /** produkt care **/
+
+    #care_text {
+        margin: 2vw 2vw;
+        padding: 1vw;
+        font: 'Poiret One', cursive;
+        width: 50vw;
+    }
+
+    #care_wrapper {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    #care h1 {
+        margin: 15vw 0vw 0vw 3vw;
+    }
+
+    #care_billede {
+        margin: 1vw;
+        width: 40vw;
+    }
 
 
     /*
