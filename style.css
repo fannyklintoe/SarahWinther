@@ -218,7 +218,7 @@ nav {
     flex-wrap: wrap;
     padding: 2vh;
     width: 250px;
-    margin: 5vh auto 1vh;
+    margin: 1vh auto 1vh;
     justify-content: space-between;
 }
 
@@ -282,6 +282,15 @@ nav {
     margin: 0.5vh auto;
 }
 
+/*#forside_om,
+#produkt_detalje,
+.slideshow,
+#studio {
+    background-color: #ffffff90;
+    margin: 0 5vw;
+    padding: 5vh;
+}*/
+
 #om_wrapper {
     width: 90vw;
     margin: 0 auto;
@@ -292,7 +301,8 @@ nav {
         "forside_txt";
 }
 
-#forside_portrait {
+#forside_portrait,
+#about_portrait {
     background-image: url(img/portrait.jpg);
     background-size: 100%;
     /*height: 508.5px;
@@ -350,9 +360,14 @@ nav {
     width: 100vw;
 }
 
+#sidebar button {
+    margin: 0;
+    border: none;
+}
+
 .valgt {
     /*Klassen som bliver tilføjet knappen når den er blevet trykket på*/
-    background-color: #d2e19f;
+    background-color: #c294bb;
     color: black;
     font-weight: bold;
 }
@@ -442,14 +457,7 @@ nav {
 }
 
 #about_portrait {
-    background-image: url(img/portrait.jpg);
-    background-size: 100%;
-    height: 508.5px;
-    width: 450px;
-    flex-basis: 1;
-    flex-grow: 200px;
     grid-area: about_portrait;
-    margin-bottom: 10vw;
 }
 
 #about_txt {
@@ -740,7 +748,8 @@ footer img {
             "forside_portrait forside_txt";
     }
 
-    #forside_portrait {
+    #forside_portrait,
+    #about_portrait {
         height: 508.5px;
         width: 450px;
     }
