@@ -359,9 +359,14 @@ nav {
     width: 100vw;
 }
 
+#sidebar button {
+    margin: 0;
+    border: none;
+}
+
 .valgt {
     /*Klassen som bliver tilføjet knappen når den er blevet trykket på*/
-    background-color: #d2e19f;
+    background-color: #c294bb;
     color: black;
     font-weight: bold;
 }
