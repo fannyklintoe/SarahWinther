@@ -301,7 +301,8 @@ nav {
         "forside_txt";
 }
 
-#forside_portrait {
+#forside_portrait,
+#about_portrait {
     background-image: url(img/portrait.jpg);
     background-size: 100%;
     /*height: 508.5px;
@@ -456,14 +457,7 @@ nav {
 }
 
 #about_portrait {
-    background-image: url(img/portrait.jpg);
-    background-size: 100%;
-    height: 508.5px;
-    width: 450px;
-    flex-basis: 1;
-    flex-grow: 200px;
     grid-area: about_portrait;
-    margin-bottom: 10vw;
 }
 
 #about_txt {
@@ -753,7 +747,8 @@ footer img {
             "forside_portrait forside_txt";
     }
 
-    #forside_portrait {
+    #forside_portrait,
+    #about_portrait {
         height: 508.5px;
         width: 450px;
     }
