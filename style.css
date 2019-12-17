@@ -446,11 +446,12 @@ nav {
     flex-basis: 1;
     flex-grow: 200px;
     grid-area: about_portrait;
+    margin-bottom: 10vw;
 }
 
 #about_txt {
     grid-area: about_txt;
-    margin-top: 2vw;
+    margin-top: 5vw;
 }
 
 /** Studio **/
