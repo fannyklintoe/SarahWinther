@@ -557,9 +557,9 @@ form {
     padding-top: 15vw;
 }
 
-#about_video {
+#SW_video {
     width: 100%;
-    height: 50vh;
+    height: 50vh
 }
 
 #about_wrapper {
@@ -584,9 +584,6 @@ form {
 
 /** Studio **/
 
-#studio {
-    margin: 100px 0 0 0;
-}
 
 #studio_indhold {
     display: grid;
@@ -594,12 +591,10 @@ form {
     width: 400px;
     margin: auto;
     grid-template-areas:
-        "studio_pic1"
         "title"
-        "text"
-        "studio_pic3"
-        "studio_pic7"
-        "studio_pic8";
+        "studio_ text"
+        "studio_pic1"
+    ;
 }
 
 #studio_txt {
@@ -607,7 +602,7 @@ form {
     width: 400px;
 }
 
-#studio h3 {
+#studio_indhold h3 {
     grid-area: title;
 }
 
@@ -619,29 +614,35 @@ form {
     grid-area: studio_pic1;
 }
 
-#studio_pic3 {
-    background-image: url(studio_img/montre2.JPG);
-    background-size: 100%;
+/** Contakt **/
+#contact_info {
+    display: grid;
+    grid-gap: 1rem;
     width: 400px;
-    height: 267px;
-    grid-area: studio_pic3;
+    grid-template-areas:
+        "info_container"
+        "map";
 }
 
-
-#studio_pic7 {
-    background-image: url(studio_img/butik_hoj.JPG);
-    background-size: 100%;
+#contact_wrapper {
+    grid-area: info_container;
+    display: grid;
+    grid-gap: 1rem;
     width: 400px;
-    height: 600px;
-    grid-area: studio_pic7;
+    grid-template-areas:
+        "adress opening";
 }
 
-#studio_pic8 {
-    background-image: url(studio_img/varksted_hoj1.JPG);
-    background-size: 100%;
-    width: 400px;
-    height: 600px;
-    grid-area: studio_pic8;
+# map {
+    grid-area: map;
+}
+
+#opening {
+    grid-area: opening;
+}
+
+#adress {
+    grid-area: adress;
 }
 
 
