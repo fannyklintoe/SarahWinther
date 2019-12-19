@@ -52,6 +52,7 @@ a:hover {
 
 button {
     font-family: 'Poiret One', cursive;
+    margin: 1vh;
 }
 
 h1 {
@@ -364,7 +365,7 @@ nav {
     /*Fortæller antal kollonner og bredde på kolonner*/
     grid-gap: 1rem;
     /*Mellemrum mellem kolonnerne*/
-    width: 60vw;
+    width: 80vw;
     margin: 30px auto;
     padding: 0 0 150px 0;
 }
@@ -582,35 +583,47 @@ form {
 
 
 /** About **/
-#video {
-    display: flex;
-    flex-direction: column;
-    padding-top: 15vw;
+
+
+#about_video {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+
+#about_video h1 {
+    text-align: center;
 }
 
 #SW_video {
-    width: 100%;
-    height: 50vh
+    width: 400px;
+    height: 225px;
+    margin: 0 auto;
 }
 
 #about_wrapper {
-    width: 90vw;
+    width: 400px;
     margin: 0 auto;
     display: grid;
     grid-gap: 1.6rem;
     grid-template-areas:
-        "about_txt"
+        "about_title"
         "about_portrait"
-    ;
+        "about_txt";
+}
+
+#about_wrapper h1 {
+    grid-area: about_title;
 }
 
 #about_portrait {
     grid-area: about_portrait;
+    margin: 0;
 }
 
 #about_txt {
     grid-area: about_txt;
-    margin-top: 5vw;
+    margin: 0;
 }
 
 /** Studio **/
@@ -622,31 +635,45 @@ form {
     width: 400px;
     margin: auto;
     grid-template-areas:
-        "title"
-        "studio_ text"
-        "studio_pic1"
-    ;
+        "studio_title"
+        "studio_text"
+        "studio_pic1";
+}
+
+#studio_indhold h1 {
+    grid-area: studio_title;
 }
 
 #studio_txt {
-    grid-area: text;
+    grid-area: studio_text;
     width: 400px;
-}
-
-#studio_indhold h3 {
-    grid-area: title;
 }
 
 #studio_pic1 {
-    background-image: url(studio_img/facade1.JPG);
+    background-image: url(studio_img/montre2.JPG);
     background-size: 100%;
     width: 400px;
-    height: 133.5px;
+    height: 266.7px;
     grid-area: studio_pic1;
 }
 
+
 /** Contakt **/
-#contact_info {
+
+#about h1 {
+    margin: 7vh 0 2vh 0;
+}
+
+#contact h1 {
+    text-align: center;
+}
+
+#contact {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#contact_wrapper {
     display: grid;
     grid-gap: 1rem;
     width: 400px;
@@ -655,16 +682,17 @@ form {
         "map";
 }
 
-#contact_wrapper {
+#info_container {
     grid-area: info_container;
     display: grid;
     grid-gap: 1rem;
     width: 400px;
+    margin: 0 auto;
     grid-template-areas:
         "adress opening";
 }
 
-# map {
+#map {
     grid-area: map;
 }
 
@@ -676,6 +704,10 @@ form {
     grid-area: adress;
 }
 
+#kort {
+    width: 400px;
+    height: 275px;
+}
 
 /** Forhandlere **/
 
@@ -1059,7 +1091,6 @@ footer img {
     }
 
 
-
 }
 
 @media(min-width: 900px) {
@@ -1086,6 +1117,61 @@ footer img {
         /**left: 80px;**/
     }
 
+    /** About **/
+
+
+    #about_video {
+        padding: 120px 0 0 0;
+    }
+
+    #about_video {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    #SW_video {
+        width: 900px;
+        height: 506.25px;
+    }
+
+    #about_wrapper {
+        width: 900px;
+        margin: 0 auto;
+        grid-template-areas:
+            "about_title ."
+            "about_portrait about_txt";
+    }
+
+    #studio_indhold {
+        width: 900px;
+        margin: auto;
+        grid-template-areas:
+            "studio_title ."
+            "studio_text studio_pic1";
+    }
+
+    #contact {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    #contact_wrapper {
+        padding: 1vh;
+        width: 900px;
+        margin: 0 auto;
+        grid-template-areas:
+            "info_container map";
+    }
+
+    .contact_container {
+        width: 1000px;
+    }
+
+    #kort {
+        width: 480px;
+        height: 330px;
+    }
+
 
     /** Custom orders **/
 
@@ -1103,35 +1189,6 @@ footer img {
         margin: 0;
         width: 150vw;
         height: 20vw;
-    }
-
-    /** About **/
-
-
-    #about_wrapper {
-        margin: 8vw;
-        grid-template-areas:
-            "about_portrait . about_txt"
-
-        ;
-    }
-
-    /** Studio **/
-
-    #studio_indhold {
-        width: 800px;
-        margin: 200px auto;
-        grid-gap: 0.2rem;
-        grid-template-areas:
-            "title ."
-            "studio_pic1 studio_pic1"
-            "studio_pic3 text"
-            "studio_pic8 studio_pic7";
-    }
-
-    #studio_pic1 {
-        width: 800px;
-        height: 267px;
     }
 
     /** size Guide**/
