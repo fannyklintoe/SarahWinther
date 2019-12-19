@@ -35,6 +35,7 @@ function start() {
 
     if (document.querySelector("#about")) {
         hentAboutJson();
+        hentStudioData();
     }
 
     if (document.querySelector("#studio")) {
@@ -255,7 +256,6 @@ async function hentStudioData() {
 }
 
 function visStudioData() {
-    document.querySelector("h3").textContent = side.title.rendered;
     document.querySelector("#studio_txt").innerHTML = side.content.rendered;
 }
 
