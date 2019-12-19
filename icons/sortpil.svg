@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 340">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 29px;
+      }
+    </style>
+  </defs>
+  <title>sortpil</title>
+  <polyline class="cls-1" points="17.5 25.5 259.5 306.5 485.5 33.5"/>
+</svg>
