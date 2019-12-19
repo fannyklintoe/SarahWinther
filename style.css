@@ -364,7 +364,7 @@ nav {
     /*Fortæller antal kollonner og bredde på kolonner*/
     grid-gap: 1rem;
     /*Mellemrum mellem kolonnerne*/
-    width: 60vw;
+    width: 80vw;
     margin: 30px auto;
     padding: 0 0 150px 0;
 }
