@@ -419,19 +419,19 @@ nav {
     position: relative;
 }
 
-.prev,
-.next {
+#prev,
+#next {
     position: absolute;
     font-size: 2rem;
     cursor: pointer;
     top: 200px;
 }
 
-.prev {
+#prev {
     left: 0;
 }
 
-.next {
+#next {
     right: 0;
 }
 
@@ -469,9 +469,17 @@ nav {
 
 }
 
+#custom_h1 h1 {
+    margin: 0;
+}
+
 /* Hide the images by default */
 .mySlides {
     display: none;
+}
+
+.slideshow_container {
+    position: relative;
 }
 
 /* Next & previous buttons */
@@ -479,7 +487,7 @@ nav {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 70%;
+    top: 50%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -493,8 +501,12 @@ nav {
 
 /* Position the "next button" to the right */
 .next {
-    right: 0;
+    right: 0px;
     border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
 }
 
 /* The dots/bullets/indicators */
@@ -1164,7 +1176,8 @@ footer img {
     }
 
     .contact_container {
-        width: 1000px;
+        width: 900px;
+        margin: 0 auto;
     }
 
     #kort {
@@ -1182,13 +1195,19 @@ footer img {
         justify-content: space-between;
         margin: auto;
         padding: 1vw;
+        max-width: 1000px;
+        margin: 0 auto;
     }
 
     .slideshow-container {
-        padding: 5vw;
+        padding: 2vw;
         margin: 0;
-        width: 150vw;
+        width: 80vw;
         height: 20vw;
+    }
+
+    #custom_text {
+        margin: 0vw 1vw;
     }
 
     /** size Guide**/
@@ -1350,7 +1369,7 @@ footer img {
     }*/
 
     #smykker_oversigt {
-        margin: 10vh 0;
+        margin: 10vh 0 3vh 0;
     }
 
 }

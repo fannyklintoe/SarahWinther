@@ -28,8 +28,8 @@ function start() {
 
     if (document.querySelector("#product")) {
         hentProduktData();
-        document.querySelector(".prev").addEventListener("click", klikPrev);
-        document.querySelector(".next").addEventListener("click", klikNext);
+        document.querySelector("#prev").addEventListener("click", klikPrev);
+        document.querySelector("#next").addEventListener("click", klikNext);
 
     }
 
